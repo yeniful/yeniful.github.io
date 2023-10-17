@@ -1,0 +1,26 @@
+I"#<h3 id="intro">Intro</h3>
+<ul>
+  <li>iOS 14에서 재디자인된 Picker UI 신기능: search, zoomable grid</li>
+  <li>photo library 접근 요청할 필요 없음!
+    <ol>
+      <li>디버깅 예시 (Live debugging)</li>
+      <li>LLDB 개선 사항 (LLDB improvements)</li>
+      <li>로깅 팁 (Tips for logging)</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="1-디버그-콘솔-알아보기-tour-debug-console">1. 디버그 콘솔 알아보기 (Tour Debug Console)</h3>
+<ul>
+  <li>Type, Library, Subsystem, Category 선택해서 추가 정보 얻을 수 있음</li>
+  <li>로그의 Type, TimeStamp, Library, Subsystem, Category, Call site정보 보여주고</li>
+  <li>보고싶은 데이터만 필터로 지정해서 볼 수 있음</li>
+  <li>popup으로 이용가능한 metadata 보여줌</li>
+</ul>
+
+<h3 id="2-디버깅-예시-live-debugging">2. 디버깅 예시 (Live debugging)</h3>
+
+<h3 id="3-lldb-개선-사항-lldb-improvements">3. LLDB 개선 사항 (LLDB improvements)</h3>
+
+<h3 id="4-로깅-팁-tips-for-logging">4. 로깅 팁 (Tips for logging)</h3>
+:ET

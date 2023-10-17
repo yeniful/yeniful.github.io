@@ -1,0 +1,58 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Sidey",
+    "home_page_url": "http://localhost:4000/",
+    "feed_url": "http://localhost:4000/feed.json",
+    "description": "Simple and minimalistic jekyll blogging theme.",
+    "icon": "http://localhost:4000/apple-touch-icon.png",
+    "favicon": "http://localhost:4000/favicon.ico",
+    "expired": false,
+    
+    "author": "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}",
+    
+"items": [
+    
+        {
+            "id": "http://localhost:4000/2023/10/17/wwdc23-debug-with-structed-logging",
+            "title": "(WWDC23) Debug with structured logging",
+            "summary": "This is a collection of short CSS snippets I thought might be useful for beginners",
+            "content_text": "Intro 1. 디버그 콘솔 알아보기 (Tour Debug Console) 2. 디버깅 예시 (Live debugging) 3. LLDB 개선 사항 (LLDB improvements) 4. 로깅 팁 (Tips for logging)1. 디버그 콘솔 알아보기 (Tour Debug Console) - Type, Library, Subsystem, Category 선택해서 추가 정보 얻을 수 있음 - 로그의 Type, TimeStamp, Library, Subsystem, Category, Call   site정보 보여주고 - 보고싶은 데이터만 필터로 지정해서 볼 수 있음 - popup으로 이용가능한 metadata 보여줌2. 디버깅 예시 (Live debugging)3. LLDB 개선 사항 (LLDB improvements)4. 로깅 팁 (Tips for logging)",
+            "content_html": "<h2 id=\"intro\">Intro</h2><p> 1. 디버그 콘솔 알아보기 (Tour Debug Console)<br /> 2. 디버깅 예시 (Live debugging)<br /> 3. LLDB 개선 사항 (LLDB improvements)<br /> 4. 로깅 팁 (Tips for logging)</p><h2 id=\"1-디버그-콘솔-알아보기-tour-debug-console\">1. 디버그 콘솔 알아보기 (Tour Debug Console)</h2><p> - Type, Library, Subsystem, Category 선택해서 추가 정보 얻을 수 있음<br /> - 로그의 Type, TimeStamp, Library, Subsystem, Category, Call   site정보 보여주고<br /> - 보고싶은 데이터만 필터로 지정해서 볼 수 있음<br /> - popup으로 이용가능한 metadata 보여줌</p><h2 id=\"2-디버깅-예시-live-debugging\">2. 디버깅 예시 (Live debugging)</h2><h2 id=\"3-lldb-개선-사항-lldb-improvements\">3. LLDB 개선 사항 (LLDB improvements)</h2><h2 id=\"4-로깅-팁-tips-for-logging\">4. 로깅 팁 (Tips for logging)</h2>",
+            "url": "http://localhost:4000/2023/10/17/wwdc23-debug-with-structed-logging",
+            
+            
+            
+            "tags": ["WWDC","WWDC23"],
+            
+            "date_published": "2023-10-17T00:00:00+09:00",
+            "date_modified": "2023-10-17T00:00:00+09:00",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/2023/10/03/wwdc23-embed-the-photos-picker-in-your-app",
+            "title": "(WWDC23) Embed the Photos Picker in your app",
+            "summary": "This is a collection of short CSS snippets I thought might be useful for beginners",
+            "content_text": "Intro  iOS 14에서 재디자인된 Picker UI 신기능: search, zoomable grid  해당 세션에서는 앱에 시스템 피커를 임베드할 수 있는 API들에 대해 소개할 것          Embedded picker      Options menu      HDR and Cinematic      Embedded picker  앱에서 실행되는 것 같지만, 다른 프로세스에서 실행됨. 앱의 top 에서 렌더링된것          picker에 직접적으로 접근할 수 없음.      Picker 내용도 스크린샷 할 수 없음      Options menu  picker style  .presentation: 기본  .inline: accessories가 사라진  .compact: 하단의 scrollable pickerHDR and Cinematic",
+            "content_html": "<h3 id=\"intro\">Intro</h3><ul>  <li>iOS 14에서 재디자인된 Picker UI 신기능: search, zoomable grid</li>  <li>해당 세션에서는 앱에 시스템 피커를 임베드할 수 있는 API들에 대해 소개할 것    <ol>      <li>Embedded picker</li>      <li>Options menu</li>      <li>HDR and Cinematic</li>    </ol>  </li></ul><h3 id=\"embedded-picker\">Embedded picker</h3><ul>  <li>앱에서 실행되는 것 같지만, 다른 프로세스에서 실행됨. 앱의 top 에서 렌더링된것    <ul>      <li>picker에 직접적으로 접근할 수 없음.</li>      <li>Picker 내용도 스크린샷 할 수 없음</li>    </ul>  </li></ul><h3 id=\"options-menu\">Options menu</h3><ul>  <li>picker style</li>  <li><code>.presentation</code>: 기본</li>  <li><code>.inline</code>: accessories가 사라진</li>  <li><code>.compact</code>: 하단의 scrollable picker</li></ul><h3 id=\"hdr-and-cinematic\">HDR and Cinematic</h3>",
+            "url": "http://localhost:4000/2023/10/03/wwdc23-embed-the-photos-picker-in-your-app",
+            
+            
+            
+            "tags": ["WWDC","WWDC23"],
+            
+            "date_published": "2023-10-03T00:00:00+09:00",
+            "date_modified": "2023-10-03T00:00:00+09:00",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        }
+    
+    ]
+}
