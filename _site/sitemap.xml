@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/about</loc>
+<lastmod>2023-10-18T00:20:04+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/search</loc>
+<lastmod>2023-10-18T00:20:04+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2023/10/03/wwdc23-embed-the-photos-picker-in-your-app</loc>
+<lastmod>2023-10-03T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2023/10/17/wwdc23-debug-with-structed-logging</loc>
+<lastmod>2023-10-17T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/WWDC/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/WWDC23/</loc>
+</url>
+</urlset>

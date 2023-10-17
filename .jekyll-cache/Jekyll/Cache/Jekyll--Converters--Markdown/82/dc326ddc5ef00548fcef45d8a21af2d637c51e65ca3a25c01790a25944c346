@@ -1,0 +1,22 @@
+I"�<h3 id="intro">Intro</h3>
+<ul>
+  <li>iOS 14에서 재디자인된 Picker UI 신기능: search, zoomable grid</li>
+  <li>해당 세션에서는 앱에 시스템 피커를 임베드할 수 있는 API들에 대해 소개할 것
+    <ol>
+      <li>Embedded picker</li>
+    </ol>
+  </li>
+  <li>Options menu</li>
+</ul>
+
+<h3 id="options-menu">Options menu</h3>
+<ul>
+  <li>Type, Library, Subsystem, Category 선택해서 추가 정보 얻을 수 있음</li>
+  <li>로그의 Type, TimeStamp, Library, Subsystem, Category, Call site정보 보여주고</li>
+  <li>보고싶은 데이터만 필터로 지정해서 볼 수 있음</li>
+  <li>popup으로 이용가능한 metadata 보여줌</li>
+</ul>
+
+<h3 id="hdr-and-cinematic">HDR and Cinematic</h3>
+
+:ET

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Sidey</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2023-10-18T00:20:04+09:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>(WWDC23) Debug with structured logging</title>
+   <link href="http://localhost:4000/2023/10/17/wwdc23-debug-with-structed-logging"/>
+   <updated>2023-10-17T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/10/17/WWDC23-debug-with-structed-logging</id>
+   <content type="html">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+&lt;p&gt; 1. 디버그 콘솔 알아보기 (Tour Debug Console)&lt;br /&gt;
+ 2. 디버깅 예시 (Live debugging)&lt;br /&gt;
+ 3. LLDB 개선 사항 (LLDB improvements)&lt;br /&gt;
+ 4. 로깅 팁 (Tips for logging)&lt;/p&gt;
+
+&lt;h2 id=&quot;1-디버그-콘솔-알아보기-tour-debug-console&quot;&gt;1. 디버그 콘솔 알아보기 (Tour Debug Console)&lt;/h2&gt;
+&lt;p&gt; - Type, Library, Subsystem, Category 선택해서 추가 정보 얻을 수 있음&lt;br /&gt;
+ - 로그의 Type, TimeStamp, Library, Subsystem, Category, Call   site정보 보여주고&lt;br /&gt;
+ - 보고싶은 데이터만 필터로 지정해서 볼 수 있음&lt;br /&gt;
+ - popup으로 이용가능한 metadata 보여줌&lt;/p&gt;
+
+&lt;h2 id=&quot;2-디버깅-예시-live-debugging&quot;&gt;2. 디버깅 예시 (Live debugging)&lt;/h2&gt;
+
+&lt;h2 id=&quot;3-lldb-개선-사항-lldb-improvements&quot;&gt;3. LLDB 개선 사항 (LLDB improvements)&lt;/h2&gt;
+
+&lt;h2 id=&quot;4-로깅-팁-tips-for-logging&quot;&gt;4. 로깅 팁 (Tips for logging)&lt;/h2&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>(WWDC23) Embed the Photos Picker in your app</title>
+   <link href="http://localhost:4000/2023/10/03/wwdc23-embed-the-photos-picker-in-your-app"/>
+   <updated>2023-10-03T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2023/10/03/WWDC23-Embed-the-Photos-Picker-in-your-app</id>
+   <content type="html">&lt;h3 id=&quot;intro&quot;&gt;Intro&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;iOS 14에서 재디자인된 Picker UI 신기능: search, zoomable grid&lt;/li&gt;
+  &lt;li&gt;해당 세션에서는 앱에 시스템 피커를 임베드할 수 있는 API들에 대해 소개할 것
+    &lt;ol&gt;
+      &lt;li&gt;Embedded picker&lt;/li&gt;
+      &lt;li&gt;Options menu&lt;/li&gt;
+      &lt;li&gt;HDR and Cinematic&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;embedded-picker&quot;&gt;Embedded picker&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;앱에서 실행되는 것 같지만, 다른 프로세스에서 실행됨. 앱의 top 에서 렌더링된것
+    &lt;ul&gt;
+      &lt;li&gt;picker에 직접적으로 접근할 수 없음.&lt;/li&gt;
+      &lt;li&gt;Picker 내용도 스크린샷 할 수 없음&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;options-menu&quot;&gt;Options menu&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;picker style&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.presentation&lt;/code&gt;: 기본&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.inline&lt;/code&gt;: accessories가 사라진&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.compact&lt;/code&gt;: 하단의 scrollable picker&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hdr-and-cinematic&quot;&gt;HDR and Cinematic&lt;/h3&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>
