@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Yeni (Software Engineer, iOS Developer, Community)
+title: Yeni
 ---
-Contact: yeniful@icloud.com
+**iOS Developer, Community Organizer**  
+**yeniful@icloud.com**
 /
-[LinkedIn](https://www.linkedin.com/in/yeniful/)
+[**LinkedIn**](https://www.linkedin.com/in/yeniful/)
 /
-[GitHub](https://github.com)
+[**GitHub**](https://github.com)
 
 
 
