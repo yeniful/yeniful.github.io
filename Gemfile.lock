@@ -71,6 +71,5 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
 
-# BUNDLED WITH
-#   1.17.2
-
+BUNDLED WITH
+   1.17.2
