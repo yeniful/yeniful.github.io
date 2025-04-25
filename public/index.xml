@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yeniful</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Yeniful</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Apr 2025 12:37:34 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Fri, 25 Apr 2025 12:37:34 +0900</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;어땟냐면요&lt;/p&gt;&#xA;&lt;h2 id=&#34;야호&#34;&gt;야호&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;넘흐&lt;/strong&gt; 좋았어요&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>나의 하루</title>
+      <link>http://localhost:1313/posts/my-first-post-copy/</link>
+      <pubDate>Fri, 25 Apr 2025 12:37:34 +0900</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post-copy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About Yeni</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;저는 예으니에요&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;헤헤&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>이지피지</title>
+      <link>http://localhost:1313/projects/ezpz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/ezpz/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>트래카</title>
+      <link>http://localhost:1313/projects/tracka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/tracka/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

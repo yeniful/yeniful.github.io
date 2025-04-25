@@ -1,3 +1,68 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://yeniful.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+theme = 'ananke'
+title = 'Yeniful'
+
+enableEmoji = true
+
+# sectionPagesMenu를 'main'으로 설정하면, content 하위 폴더들을 메뉴바 경로로 사용 (폴더명s)
+# sectionPagesMenu = 'main'
+# 사이트의 각 최상위 섹션에 대한 메뉴 항목을 자동으로 정의하려면 사이트 구성에서 섹션 페이지 메뉴를 활성화하십시오.
+
+
+
+[params]
+  subtitle = 'The Best Widgets on Earth'
+  [params.contact]
+    email = 'info@example.org'
+    phone = '+1 202-555-1212'
+
+[module]
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+  [[module.mounts]]
+    source = '/home/user/shared-content'
+    target = 'content'
+
+
+[menus]
+
+# "main" 메뉴를 위한 경로 설정
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 30
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/About'
+    weight = 40
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/Contact'
+    weight = 50
+    
+
+### 설명 ###
+# name = 메뉴바에서 보여질 이름
+# pageRef = /마크다운파일이름, 대소문자 구분 X
+# weight = 순서를 부여하기 위한 가중치 👀 [ByWeight](https://gohugo.io/methods/menu/byweight/)
+
+# "main" 메뉴 footer
+#  [[menus.footer]]
+#    name = 'Terms'
+#    pageRef = '/Contact'
+#    weight = 10
+#  [[menus.footer]]
+#    name = 'Privacy'
+#    pageRef = '/privacy'
+#    weight = 20
+
