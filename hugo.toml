@@ -41,10 +41,10 @@ enableEmoji = true
     name = 'Projects'
     pageRef = '/projects'
     weight = 30
-#  [[menus.main]]
-#    name = 'Notice'
-#    pageRef = '/About'
-#    weight = 40
+  [[menus.main]]
+    name = 'Notice'
+    pageRef = '/Notice'
+    weight = 40
 #  [[menus.main]]
 #    name = 'Contact'
 #    pageRef = '/Contact'

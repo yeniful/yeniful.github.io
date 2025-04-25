@@ -12,7 +12,7 @@ cd public
 git add .
 
 # Commit changes.
-msg="rebuilding site `date`"
+msg="Deploy: Deployed site `LC_ALL=C date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
@@ -27,7 +27,7 @@ cd ..
 # Commit and push to main branch
 git add .
 
-msg="rebuilding site `date`"
+msg="Deploy: Deployed site `LC_ALL=C date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
