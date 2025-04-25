@@ -41,14 +41,14 @@ enableEmoji = true
     name = 'Projects'
     pageRef = '/projects'
     weight = 30
-  [[menus.main]]
-    name = 'About'
-    pageRef = '/About'
-    weight = 40
-  [[menus.main]]
-    name = 'Contact'
-    pageRef = '/Contact'
-    weight = 50
+#  [[menus.main]]
+#    name = 'Notice'
+#    pageRef = '/About'
+#    weight = 40
+#  [[menus.main]]
+#    name = 'Contact'
+#    pageRef = '/Contact'
+#    weight = 50
     
 
 ### 설명 ###
