@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # main 브랜치에 push되면 배포 시작
+  workflow_dispatch:  # 수동 트리거 옵션 추가
 
 jobs:
   deploy:
@@ -12,6 +13,8 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -29,4 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          destination_branch: gh-pages  # gh-pages 브랜치로 배포
+          publish_branch: gh-pages  # gh-pages 브랜치로 배포
