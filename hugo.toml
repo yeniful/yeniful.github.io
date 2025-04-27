@@ -12,10 +12,14 @@ enableEmoji = true
 
 
 [params]
-  subtitle = 'The Best Widgets on Earth'
+  # 댓글 기능을 위한 cusdis app id 정보. Github Action에서 관리중인 ID 값을 가져옴
+  cusdisAppId = "{{ getenv `CUSDIS_APP_ID` }}"
+
+  # 정보
+  subtitle = 'Yeniful Tech Blog'
   [params.contact]
-    email = 'info@example.org'
-    phone = '+1 202-555-1212'
+    email = 'yeniful@icloud.com'
+
 
 [module]
   [[module.mounts]]
