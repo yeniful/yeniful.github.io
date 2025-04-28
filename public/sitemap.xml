@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:51999/posts/</loc>
+    <loc>https://yeniful.github.io/posts/</loc>
     <lastmod>2025-04-25T15:06:46+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:51999/</loc>
+    <loc>https://yeniful.github.io/</loc>
     <lastmod>2025-04-25T15:06:46+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:51999/posts/first-post/</loc>
+    <loc>https://yeniful.github.io/posts/first-post/</loc>
     <lastmod>2025-04-25T15:06:46+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:51999/categories/</loc>
+    <loc>https://yeniful.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:51999/notice/</loc>
+    <loc>https://yeniful.github.io/notice/</loc>
   </url><url>
-    <loc>http://localhost:51999/projects/</loc>
+    <loc>https://yeniful.github.io/projects/</loc>
   </url><url>
-    <loc>http://localhost:51999/tags/</loc>
+    <loc>https://yeniful.github.io/tags/</loc>
   </url>
 </urlset>
