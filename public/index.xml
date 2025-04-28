@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yeniful</title>
+    <link>http://localhost:51999/</link>
+    <description>Recent content on Yeniful</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Apr 2025 15:06:46 +0900</lastBuildDate>
+    <atom:link href="http://localhost:51999/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>똑똑똑, 이사왔어요~ 🛻💨</title>
+      <link>http://localhost:51999/posts/first-post/</link>
+      <pubDate>Fri, 25 Apr 2025 15:06:46 +0900</pubDate>
+      <guid>http://localhost:51999/posts/first-post/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:51999/images/Sirutteok.jpg&#34; alt=&#34;이사떡&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;다시-돌아온-깃허브-블로그-반가워요-&#34;&gt;다시 돌아온 깃허브 블로그 반가워요 👋&lt;/h3&gt;&#xA;&lt;p&gt;안녕하세요, 예니입니다-! 👻 (이사떡을 주섬주섬 꺼낸다&amp;hellip;)&lt;/p&gt;&#xA;&lt;p&gt;오래 전부터 깃허브 블로그 운영을 여러 차례 시도했지만, 매번 손을 놓아버리게 된 슬픈 기억이 있어요. (꾸밀 때만 열심히 &amp;hellip;🎨) 작년부터 Medium에서 글을 꾸준히 써보기도 했고, 모종의 이유로 동기부여가 생겨 기술 블로그를! 깃허브에서! 다시 운영해보려고 합니다! (예쁜 디자인 다 필요 없고 일단 기본 테마로 꾸준히 써보라는 개발자 M님의 조언을 다시 한 번 되새겨봅니다)&lt;/p&gt;&#xA;&lt;p&gt;티스토리와 Velog, 여러 해외 개발자 블로그 플랫폼 그리고 미디움을 거쳐서 다시 돌아오게 되었는데요. DevTO, Hashnode, Substack 등 WordPress나 Wix같이 유료 서비스 빼고 거의 다 써봤는데 정착하고 싶은 곳이 정말정말 없더라구요. 🥲 무엇보다도 많은 서비스들이 빠르게 생기고, 빠르게 사라지기에 안정적인 플랫폼을 선택하고 싶었어요.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notice</title>
+      <link>http://localhost:51999/notice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:51999/notice/</guid>
+      <description>&lt;h3 id=&#34;이삿짐-정리중-&#34;&gt;이삿짐 정리중 🧳&lt;/h3&gt;&#xA;&lt;p&gt;블로그 정비중입니다. 조금만 기다려주세요 : )&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
