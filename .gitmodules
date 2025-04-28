@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/yeniful/yeniful.github.io.git
+	branch = gh-pages
