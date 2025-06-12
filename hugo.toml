@@ -1,27 +1,4 @@
 baseURL = "http://yeniful.github.io/"
 languageCode = "en-us"
 title = "Yeniful"
-theme = "hugo-PaperMod"
-
-[params]
-# 홈페이지 모드 설정
-homeInfoParams.Title = "안녕하세요"
-homeInfoParams.Content = "PaperMod 테마를 사용한 블로그입니다"
-
-# 프로필 모드 (선택사항)
-profileMode.enabled = false
-profileMode.title = "제목"
-profileMode.subtitle = "부제목"
-
-# 메뉴 설정
-[[menu.main]]
-identifier = "home"
-name = "Home"
-url = "/"
-weight = 10
-
-[[menu.main]]
-identifier = "posts"
-name = "Posts"
-url = "/posts/"
-weight = 20
+theme = "PaperMod"
