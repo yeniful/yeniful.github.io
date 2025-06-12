@@ -2,3 +2,8 @@ baseURL = "http://yeniful.github.io/"
 languageCode = "en-us"
 title = "Yeniful"
 theme = "PaperMod"
+
+# 기능 추가를 위한 config 
+# 문서의 yaml을 toml로 바꿔서 추가해야 함 (https://transform.tools/yaml-to-toml)
+[params]
+comments = true

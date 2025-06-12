@@ -1,0 +1,20 @@
+/* Cusdis 댓글 스타일 */
+.comments-wrapper {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+#cusdis_thread {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 300px;
+}
+
+#cusdis_thread iframe {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 300px !important;
+  border: none !important;
+  overflow: visible !important;
+}
