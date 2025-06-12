@@ -1,20 +1,23 @@
 /* Cusdis 댓글 스타일 */
-.comments-wrapper {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-}
-
-#cusdis_thread {
-  overflow: visible !important;
-  height: auto !important;
-  min-height: 300px;
+#cusdis_thread,
+#cusdis_thread * {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
 }
 
 #cusdis_thread iframe {
-  width: 100% !important;
-  height: auto !important;
-  min-height: 300px !important;
-  border: none !important;
-  overflow: visible !important;
+    height: 800px !important; /* 고정 높이 */
+    min-height: 100px !important;
+    overflow: visible !important;
 }
+
+#cusdis_thread iframe body,
+#cusdis_thread iframe html {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+/*
+    iframe의 cross-origin 제한 때문에 완전한 동적 높이 조정 어려움
+*/
