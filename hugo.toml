@@ -1,72 +1,27 @@
-baseURL = 'https://yeniful.github.io/'
-languageCode = 'en-us'
-theme = 'ananke'
-title = 'Yeniful'
-
-enableEmoji = true
-
-# sectionPagesMenu를 'main'으로 설정하면, content 하위 폴더들을 메뉴바 경로로 사용 (폴더명s)
-# sectionPagesMenu = 'main'
-# 사이트의 각 최상위 섹션에 대한 메뉴 항목을 자동으로 정의하려면 사이트 구성에서 섹션 페이지 메뉴를 활성화하십시오.
-
-
+baseURL = "http://yeniful.github.io/"
+languageCode = "en-us"
+title = "Yeniful"
+theme = "hugo-PaperMod"
 
 [params]
-  # 댓글 기능을 위한 cusdis app id 정보. Github Action에서 관리중인 ID 값을 가져옴
-  # cusdisAppId = "{{ getenv `CUSDIS_APP_ID` }}"
+# 홈페이지 모드 설정
+homeInfoParams.Title = "안녕하세요"
+homeInfoParams.Content = "PaperMod 테마를 사용한 블로그입니다"
 
-  # 정보
-  subtitle = 'Yeniful Tech Blog'
-  [params.contact]
-    email = 'yeniful@icloud.com'
+# 프로필 모드 (선택사항)
+profileMode.enabled = false
+profileMode.title = "제목"
+profileMode.subtitle = "부제목"
 
+# 메뉴 설정
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 10
 
-
-[module]
-  [[module.mounts]]
-    source = 'content'
-    target = 'content'
-  [[module.mounts]]
-    source = '/home/user/shared-content'
-    target = 'content'
-
-
-[menus]
-
-# "main" 메뉴를 위한 경로 설정
-  [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
-  [[menus.main]]
-    name = 'Posts'
-    pageRef = '/posts'
-    weight = 20
-  [[menus.main]]
-    name = 'Projects'
-    pageRef = '/projects'
-    weight = 30
-  [[menus.main]]
-    name = 'Notice'
-    pageRef = '/Notice'
-    weight = 40
-#  [[menus.main]]
-#    name = 'Contact'
-#    pageRef = '/Contact'
-#    weight = 50
-    
-
-### 설명 ###
-# name = 메뉴바에서 보여질 이름
-# pageRef = /마크다운파일이름, 대소문자 구분 X
-# weight = 순서를 부여하기 위한 가중치 👀 [ByWeight](https://gohugo.io/methods/menu/byweight/)
-
-# "main" 메뉴 footer
-#  [[menus.footer]]
-#    name = 'Terms'
-#    pageRef = '/Contact'
-#    weight = 10
-#  [[menus.footer]]
-#    name = 'Privacy'
-#    pageRef = '/privacy'
-#    weight = 20
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 20
