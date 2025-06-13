@@ -33,9 +33,6 @@ theme = "PaperMod"
         name = "X"
         url = "https://x.com/yenicode"
 
-
-        
-
 # nav 목록 
 # /Users/yeni/yeniful.github.io/themes/PaperMod/layouts/partials/header.html 여기서 렌더링 됨
 [[menu.main]]
@@ -46,16 +43,14 @@ theme = "PaperMod"
     name = "Posts"
     url = "/posts/"
     weight = 2
-#[[menu.main]]
-#   name = "Categories"
-#   url = "/categories/"
-#   weight = 3
+[[menu.main]]
+   name = "Notice"
+   url = "/notice/"
+   weight = 3
 [[menu.main]]
     name = "Search"
     url = "/search/"
     weight = 4        
-
-
 
 
 # 검색 기능
