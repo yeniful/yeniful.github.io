@@ -25,10 +25,10 @@ theme = "PaperMod"
         url = "https://github.com/yeniful"
     [[params.socialIcons]]
         name = "Medium"
-        url = "https://medium.com/yeniful/"
+        url = "https://medium.com/@yeniful/"
     [[params.socialIcons]]
         name = "Linkedin"
-        url = "https://www.linkedin.com/in/@yeniful/"
+        url = "https://www.linkedin.com/in/yeniful/"
     [[params.socialIcons]]
         name = "X"
         url = "https://x.com/yenicode"
