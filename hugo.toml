@@ -44,6 +44,10 @@ theme = "PaperMod"
     url = "/posts/"
     weight = 2
 [[menu.main]]
+    name = "Category"
+    url = "/category/"
+    weight = 2
+[[menu.main]]
    name = "Notice"
    url = "/notice/"
    weight = 3
