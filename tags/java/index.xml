@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Java on @yeniful blog</title><link>http://yeniful.github.io/tags/java/</link><description>Recent content in Java on @yeniful blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Sat, 14 Jun 2025 21:33:55 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>[Java] Java의 Collection Framework (컬렉션 프레임워크)를 알아보자!</title><link>http://yeniful.github.io/posts/2025061400/</link><pubDate>Sat, 14 Jun 2025 21:33:55 +0900</pubDate><guid>http://yeniful.github.io/posts/2025061400/</guid><description>&lt;p&gt;최근 C++과 Java 두 언어를 살펴보면서 자료구조 라이브러리(각각 STL과 컬렉션 프레임워크)에서 느껴지는 차이점이 흥미로웠습니다. 🤩
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Java on @yeniful blog</title><link>http://yeniful.github.io/tags/java/</link><description>Recent content in Java on @yeniful blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 30 Sep 2025 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>[PS/BOJ/BFS] 1012 유기농 배추</title><link>http://yeniful.github.io/posts/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;문제 : &lt;a href="https://www.acmicpc.net/problem/1012"&gt;유기농 배추&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;접근 : DFS/BFS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="코드-설계"&gt;코드 설계&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Input (배추들의 위치) Adjacency Matrix (2차원 배열)에 표시&lt;/li&gt;
+&lt;li&gt;방문한 위치를 visited 2차원 배열에 표시&lt;/li&gt;
+&lt;li&gt;(0, 0)부터 배추가 있는지, 이미 방문했던 좌표 (이미 방문했던 배추 그룹) 인지를 판별하고
+&lt;ul&gt;
+&lt;li&gt;배추가 있고, 새로 방문한 곳이라면 인접한 배추들을 BFS로 방문.&lt;/li&gt;
+&lt;li&gt;방문한 위치를 visited에 표시&lt;/li&gt;
+&lt;li&gt;인접한 배추를 다 방문했다면 탐색 종료.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;새로운 배추 그룹을 찾는다.
+&lt;ul&gt;
+&lt;li&gt;해당 그룹의 start 지점을 발견하면 지렁이를 한 마리 추가한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="구현"&gt;구현&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; java.io.*;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; java.util.*;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Main&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;public&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;static&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;(String&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; args) &lt;span style="color:#66d9ef"&gt;throws&lt;/span&gt; IOException {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; BufferedReader br &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; BufferedReader(&lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; InputStreamReader(System.&lt;span style="color:#a6e22e"&gt;in&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; T &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;parseInt&lt;/span&gt;(br.&lt;span style="color:#a6e22e"&gt;readLine&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; StringTokenizer st;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt;(T&lt;span style="color:#f92672"&gt;--&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; 0){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// Input&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; st &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; StringTokenizer(br.&lt;span style="color:#a6e22e"&gt;readLine&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; M &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;parseInt&lt;/span&gt;(st.&lt;span style="color:#a6e22e"&gt;nextToken&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; N &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;parseInt&lt;/span&gt;(st.&lt;span style="color:#a6e22e"&gt;nextToken&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; K &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;parseInt&lt;/span&gt;(st.&lt;span style="color:#a6e22e"&gt;nextToken&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;boolean&lt;/span&gt;&lt;span style="color:#f92672"&gt;[][]&lt;/span&gt; g &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;boolean&lt;/span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;M&lt;span style="color:#f92672"&gt;][&lt;/span&gt;N&lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;boolean&lt;/span&gt;&lt;span style="color:#f92672"&gt;[][]&lt;/span&gt; visited &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;boolean&lt;/span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;M&lt;span style="color:#f92672"&gt;][&lt;/span&gt;N&lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt;(K&lt;span style="color:#f92672"&gt;--&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; 0){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; st &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; StringTokenizer(br.&lt;span style="color:#a6e22e"&gt;readLine&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; x &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;parseInt&lt;/span&gt;(st.&lt;span style="color:#a6e22e"&gt;nextToken&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; y &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Integer.&lt;span style="color:#a6e22e"&gt;parseInt&lt;/span&gt;(st.&lt;span style="color:#a6e22e"&gt;nextToken&lt;/span&gt;());
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; g&lt;span style="color:#f92672"&gt;[&lt;/span&gt;x&lt;span style="color:#f92672"&gt;][&lt;/span&gt;y&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// Traversal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; result &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; dx &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; { 0, 1, 0, &lt;span style="color:#f92672"&gt;-&lt;/span&gt;1};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; dy &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; { 1, 0, &lt;span style="color:#f92672"&gt;-&lt;/span&gt;1, 0};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 0; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; M; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; j &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 0; j &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; N; j&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// 시작 점&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(g&lt;span style="color:#f92672"&gt;[&lt;/span&gt;i&lt;span style="color:#f92672"&gt;][&lt;/span&gt;j&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;false&lt;/span&gt; &lt;span style="color:#f92672"&gt;||&lt;/span&gt; visited&lt;span style="color:#f92672"&gt;[&lt;/span&gt;i&lt;span style="color:#f92672"&gt;][&lt;/span&gt;j&lt;span style="color:#f92672"&gt;]&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;continue&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; result&lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// BFS 시작&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Queue&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&amp;gt;&lt;/span&gt; q &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ArrayDeque&lt;span style="color:#f92672"&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; q.&lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; {i, j});
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; visited&lt;span style="color:#f92672"&gt;[&lt;/span&gt;i&lt;span style="color:#f92672"&gt;][&lt;/span&gt;j&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;; &lt;span style="color:#75715e"&gt;// 시작점 방문&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;q.&lt;span style="color:#a6e22e"&gt;isEmpty&lt;/span&gt;()){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; current &lt;span style="color:#f92672"&gt;=&lt;/span&gt; q.&lt;span style="color:#a6e22e"&gt;poll&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; dir &lt;span style="color:#f92672"&gt;=&lt;/span&gt; 0; dir &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; 4; dir&lt;span style="color:#f92672"&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; currentX &lt;span style="color:#f92672"&gt;=&lt;/span&gt; current&lt;span style="color:#f92672"&gt;[&lt;/span&gt;0&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; dx&lt;span style="color:#f92672"&gt;[&lt;/span&gt;dir&lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; currentY &lt;span style="color:#f92672"&gt;=&lt;/span&gt; current&lt;span style="color:#f92672"&gt;[&lt;/span&gt;1&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;+&lt;/span&gt; dy&lt;span style="color:#f92672"&gt;[&lt;/span&gt;dir&lt;span style="color:#f92672"&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(currentX &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; 0 &lt;span style="color:#f92672"&gt;||&lt;/span&gt; currentY &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; 0 &lt;span style="color:#f92672"&gt;||&lt;/span&gt; currentX &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; M &lt;span style="color:#f92672"&gt;||&lt;/span&gt; currentY &lt;span style="color:#f92672"&gt;&amp;gt;=&lt;/span&gt; N) &lt;span style="color:#66d9ef"&gt;continue&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(&lt;span style="color:#f92672"&gt;!&lt;/span&gt;g&lt;span style="color:#f92672"&gt;[&lt;/span&gt;currentX&lt;span style="color:#f92672"&gt;][&lt;/span&gt;currentY&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;||&lt;/span&gt; visited&lt;span style="color:#f92672"&gt;[&lt;/span&gt;currentX&lt;span style="color:#f92672"&gt;][&lt;/span&gt;currentY&lt;span style="color:#f92672"&gt;]&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;continue&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; visited&lt;span style="color:#f92672"&gt;[&lt;/span&gt;currentX&lt;span style="color:#f92672"&gt;][&lt;/span&gt;currentY&lt;span style="color:#f92672"&gt;]&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;true&lt;/span&gt;; &lt;span style="color:#75715e"&gt;// enque할 때 visited&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; q.&lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;[]&lt;/span&gt; {currentX, currentY});
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; System.&lt;span style="color:#a6e22e"&gt;out&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;println&lt;/span&gt;(result);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="배움"&gt;배움&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;12%에서 메모리 초과가 났었다.
+&lt;ul&gt;
+&lt;li&gt;새 좌표에 방문하는 시점 (디큐할 때 (poll)) 에 visited 처리해주고 있었는데 중복 enque가 발생했었다.&lt;/li&gt;
+&lt;li&gt;동일한 좌표가 큐에 여러번 들어가면 최악의 경우 N번 이상 중복 방문하게 된다.&lt;/li&gt;
+&lt;li&gt;이러한 이유로 중복 인큐를 방지하기 위해 큐에서 꺼낸 시점이 아닌, 큐에 넣기 전에 &lt;code&gt;visited[currentX][currentY] = true&lt;/code&gt;로 수정했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;👀 다른 사람의 DFS 풀이
+&lt;a href="https://chaerim1001.tistory.com/97"&gt;https://chaerim1001.tistory.com/97&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[Java] Java의 Collection Framework (컬렉션 프레임워크)를 알아보자!</title><link>http://yeniful.github.io/posts/2025061400_java/</link><pubDate>Sat, 14 Jun 2025 21:33:55 +0900</pubDate><guid>http://yeniful.github.io/posts/2025061400_java/</guid><description>&lt;p&gt;최근 C++과 Java 두 언어를 살펴보면서 자료구조 라이브러리(각각 STL과 컬렉션 프레임워크)에서 느껴지는 차이점이 흥미로웠습니다. 🤩
 언어별로 용어가 다르거나 인터페이스가 달라 헷갈리는 경우도 있었고, 알게된 것들을 더 잘 기억하기 위해 Java의 컬렉션(Collection) 프레임워크에 대해 간단하게 정리해보겠습니다 :)&lt;/p&gt;
 &lt;h2 id="collection이란"&gt;Collection이란?&lt;/h2&gt;
 &lt;p&gt;Java에서 &lt;strong&gt;컬렉션(Collection)&lt;/strong&gt; 은 데이터(객체)를 담고 관리하는 그릇, 즉 컨테이너(container) 역할을 하는 패키지입니다.
