@@ -90,11 +90,4 @@
 &lt;/li&gt;
 &lt;li&gt;👀 다른 사람의 DFS 풀이
 &lt;a href="https://chaerim1001.tistory.com/97"&gt;https://chaerim1001.tistory.com/97&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>[LeetCode] 1752. Check if Array Is Sorted and Rotated</title><link>http://yeniful.github.io/posts/20250615_leetcode/</link><pubDate>Sun, 15 Jun 2025 01:49:05 +0900</pubDate><guid>http://yeniful.github.io/posts/20250615_leetcode/</guid><description>&lt;h2 id="문제-problem"&gt;문제 Problem&lt;/h2&gt;
-&lt;p&gt;Status: Solved
-Difficulty: Easy
-Topics: Array&lt;/p&gt;
-&lt;p&gt;Hint
-Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.&lt;/p&gt;
-&lt;p&gt;There may be duplicates in the original array.&lt;/p&gt;
-&lt;p&gt;Note: An array A rotated by x positions results in an array B of the same length such that B[i] == A[(i+x) % A.length] for every valid index i.&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>
