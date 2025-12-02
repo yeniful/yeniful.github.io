@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>홈 on @yeniful blog</title><link>http://yeniful.github.io/</link><description>Recent content in 홈 on @yeniful blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 30 Sep 2025 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>[PS/BOJ/BFS] 1012 유기농 배추</title><link>http://yeniful.github.io/posts/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>홈 on @yeniful blog</title><link>http://yeniful.github.io/</link><description>Recent content in 홈 on @yeniful blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 30 Sep 2025 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>[PS/BOJ/BFS] 1012. 유기농 배추</title><link>http://yeniful.github.io/posts/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;문제 : &lt;a href="https://www.acmicpc.net/problem/1012"&gt;유기농 배추&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;접근 : DFS/BFS&lt;/li&gt;
@@ -90,7 +90,7 @@
 &lt;/li&gt;
 &lt;li&gt;👀 다른 사람의 DFS 풀이
 &lt;a href="https://chaerim1001.tistory.com/97"&gt;https://chaerim1001.tistory.com/97&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>[LeetCode] 1752. Check if Array Is Sorted and Rotated</title><link>http://yeniful.github.io/posts/2025061500_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link><pubDate>Sun, 15 Jun 2025 01:49:05 +0900</pubDate><guid>http://yeniful.github.io/posts/2025061500_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid><description>&lt;h2 id="문제-problem"&gt;문제 Problem&lt;/h2&gt;
+&lt;/ul&gt;</description></item><item><title>[LeetCode] 1752. Check if Array Is Sorted and Rotated</title><link>http://yeniful.github.io/posts/20250615_leetcode/</link><pubDate>Sun, 15 Jun 2025 01:49:05 +0900</pubDate><guid>http://yeniful.github.io/posts/20250615_leetcode/</guid><description>&lt;h2 id="문제-problem"&gt;문제 Problem&lt;/h2&gt;
 &lt;p&gt;Status: Solved
 Difficulty: Easy
 Topics: Array&lt;/p&gt;
@@ -103,7 +103,7 @@ Given an array nums, return true if the array was originally sorted in non-decre
 &lt;p&gt;Java에서 &lt;strong&gt;컬렉션(Collection)&lt;/strong&gt; 은 데이터(객체)를 담고 관리하는 그릇, 즉 컨테이너(container) 역할을 하는 패키지입니다.
 자바의 컨테이너는 크게 &lt;code&gt;List&lt;/code&gt; 계열, &lt;code&gt;Set&lt;/code&gt; 계열, &lt;code&gt;Map&lt;/code&gt; 계열 3가지로 구분할 수 있어요.&lt;/p&gt;
 &lt;p&gt;주의해야할 점은, &lt;code&gt;List&lt;/code&gt; 와 &lt;code&gt;Set&lt;/code&gt; 은 Collection의 하위 인터페이스지만 &lt;code&gt;Map&lt;/code&gt; 은 둘과 구분되는 인터페이스라는 것입니다.
-&lt;code&gt;Map&lt;/code&gt; 은 Collection이 아니지만, Collection과 마찬가지로 데이터를 담는 역할을 하는 친구이기 때문에 함께 정리할게요.&lt;/p&gt;</description></item><item><title>프로그래머스 Greedy 유형</title><link>http://yeniful.github.io/posts/2025060100_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025060100_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/</guid><description>&lt;h2 id="42862-체육복"&gt;42862 체육복&lt;/h2&gt;
+&lt;code&gt;Map&lt;/code&gt; 은 Collection이 아니지만, Collection과 마찬가지로 데이터를 담는 역할을 하는 친구이기 때문에 함께 정리할게요.&lt;/p&gt;</description></item><item><title>프로그래머스 Greedy 유형</title><link>http://yeniful.github.io/posts/2025060100_programmers/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025060100_programmers/</guid><description>&lt;h2 id="42862-체육복"&gt;42862 체육복&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://school.programmers.co.kr/learn/courses/30/lessons/42862"&gt;🔗 문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="내-풀이"&gt;내 풀이&lt;/h3&gt;
 &lt;blockquote&gt;
