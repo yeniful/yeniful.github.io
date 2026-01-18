@@ -1,4 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on @yeniful blog</title><link>http://yeniful.github.io/posts/</link><description>Recent content in Posts on @yeniful blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 30 Sep 2025 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>[PS/BOJ/BFS] 1012. 유기농 배추</title><link>http://yeniful.github.io/posts/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on @yeniful blog</title><link>http://yeniful.github.io/posts/</link><description>Recent content in Posts on @yeniful blog</description><generator>Hugo -- 0.154.5</generator><language>en-us</language><lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>[UIKit] ViewController 생명주기 (View Controller Life Cycle)</title><link>http://yeniful.github.io/posts/2026/20260117_viewcontroller_lifecycle/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/20260117_viewcontroller_lifecycle/</guid><description>iOS ViewController의 생명주기 메서드와 Push/Pop, Present/Dismiss 상황별 호출 순서를 정리합니다.</description></item><item><title>[LeetCode 75] Hash Map / Set</title><link>http://yeniful.github.io/posts/2026/260105_leetcode75_hash-map--set/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/260105_leetcode75_hash-map--set/</guid><description>&lt;h5 id="2215-find-the-difference-of-two-arrays"&gt;&lt;a href="https://leetcode.com/problems/find-the-difference-of-two-arrays/"&gt;2215. Find the Difference of Two Arrays&lt;/a&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;비고 : LC75_20&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;탐색:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;설계:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;구현:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="1207-unique-number-of-occurrences"&gt;&lt;a href="https://leetcode.com/problems/unique-number-of-occurrences/"&gt;1207. Unique Number of Occurrences&lt;/a&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;비고 : LC75_21&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;탐색:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;설계:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;구현:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="1657-determine-if-two-strings-are-close"&gt;&lt;a href="https://leetcode.com/problems/determine-if-two-strings-are-close/"&gt;1657. Determine if Two Strings Are Close&lt;/a&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;비고 : LC75_22&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;탐색:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;설계:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;구현:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="2352-equal-row-and-column-pairs"&gt;&lt;a href="https://leetcode.com/problems/equal-row-and-column-pairs/"&gt;2352. Equal Row and Column Pairs&lt;/a&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;비고 : LC75_23&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;탐색:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;설계:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;구현:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[PS/BOJ/BFS] 1012. 유기농 배추</title><link>http://yeniful.github.io/posts/2025/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;문제 : &lt;a href="https://www.acmicpc.net/problem/1012"&gt;유기농 배추&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;접근 : DFS/BFS&lt;/li&gt;
@@ -90,20 +149,20 @@
 &lt;/li&gt;
 &lt;li&gt;👀 다른 사람의 DFS 풀이
 &lt;a href="https://chaerim1001.tistory.com/97"&gt;https://chaerim1001.tistory.com/97&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>[PS/LeetCode/Array] 1752. Check if Array Is Sorted and Rotated</title><link>http://yeniful.github.io/posts/20250615_leetcode/</link><pubDate>Sun, 15 Jun 2025 01:49:05 +0900</pubDate><guid>http://yeniful.github.io/posts/20250615_leetcode/</guid><description>&lt;h2 id="문제-problem"&gt;문제 Problem&lt;/h2&gt;
+&lt;/ul&gt;</description></item><item><title>[PS/LeetCode/Array] 1752. Check if Array Is Sorted and Rotated</title><link>http://yeniful.github.io/posts/2025/20250615_leetcode/</link><pubDate>Sun, 15 Jun 2025 01:49:05 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250615_leetcode/</guid><description>&lt;h2 id="문제-problem"&gt;문제 Problem&lt;/h2&gt;
 &lt;p&gt;Status: Solved
 Difficulty: Easy
 Topics: Array&lt;/p&gt;
 &lt;p&gt;Hint
 Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.&lt;/p&gt;
 &lt;p&gt;There may be duplicates in the original array.&lt;/p&gt;
-&lt;p&gt;Note: An array A rotated by x positions results in an array B of the same length such that B[i] == A[(i+x) % A.length] for every valid index i.&lt;/p&gt;</description></item><item><title>[Java] Java의 Collection Framework (컬렉션 프레임워크)를 알아보자!</title><link>http://yeniful.github.io/posts/2025061400_java/</link><pubDate>Sat, 14 Jun 2025 21:33:55 +0900</pubDate><guid>http://yeniful.github.io/posts/2025061400_java/</guid><description>&lt;p&gt;최근 C++과 Java 두 언어를 살펴보면서 자료구조 라이브러리(각각 STL과 컬렉션 프레임워크)에서 느껴지는 차이점이 흥미로웠습니다. 🤩
+&lt;p&gt;Note: An array A rotated by x positions results in an array B of the same length such that B[i] == A[(i+x) % A.length] for every valid index i.&lt;/p&gt;</description></item><item><title>[Java] Java의 Collection Framework (컬렉션 프레임워크)를 알아보자!</title><link>http://yeniful.github.io/posts/2025/20250614_java/</link><pubDate>Sat, 14 Jun 2025 21:33:55 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250614_java/</guid><description>&lt;p&gt;최근 C++과 Java 두 언어를 살펴보면서 자료구조 라이브러리(각각 STL과 컬렉션 프레임워크)에서 느껴지는 차이점이 흥미로웠습니다.
 언어별로 용어가 다르거나 인터페이스가 달라 헷갈리는 경우도 있었고, 알게된 것들을 더 잘 기억하기 위해 Java의 컬렉션(Collection) 프레임워크에 대해 간단하게 정리해보겠습니다 :)&lt;/p&gt;
 &lt;h2 id="collection이란"&gt;Collection이란?&lt;/h2&gt;
 &lt;p&gt;Java에서 &lt;strong&gt;컬렉션(Collection)&lt;/strong&gt; 은 데이터(객체)를 담고 관리하는 그릇, 즉 컨테이너(container) 역할을 하는 패키지입니다.
 자바의 컨테이너는 크게 &lt;code&gt;List&lt;/code&gt; 계열, &lt;code&gt;Set&lt;/code&gt; 계열, &lt;code&gt;Map&lt;/code&gt; 계열 3가지로 구분할 수 있어요.&lt;/p&gt;
 &lt;p&gt;주의해야할 점은, &lt;code&gt;List&lt;/code&gt; 와 &lt;code&gt;Set&lt;/code&gt; 은 Collection의 하위 인터페이스지만 &lt;code&gt;Map&lt;/code&gt; 은 둘과 구분되는 인터페이스라는 것입니다.
-&lt;code&gt;Map&lt;/code&gt; 은 Collection이 아니지만, Collection과 마찬가지로 데이터를 담는 역할을 하는 친구이기 때문에 함께 정리할게요.&lt;/p&gt;</description></item><item><title>프로그래머스 Greedy 유형</title><link>http://yeniful.github.io/posts/2025060100_programmers/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025060100_programmers/</guid><description>&lt;h2 id="42862-체육복"&gt;42862 체육복&lt;/h2&gt;
+&lt;code&gt;Map&lt;/code&gt; 은 Collection이 아니지만, Collection과 마찬가지로 데이터를 담는 역할을 하는 친구이기 때문에 함께 정리할게요.&lt;/p&gt;</description></item><item><title>프로그래머스 Greedy 유형</title><link>http://yeniful.github.io/posts/2025/20250601_programmers/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250601_programmers/</guid><description>&lt;h2 id="42862-체육복"&gt;42862 체육복&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://school.programmers.co.kr/learn/courses/30/lessons/42862"&gt;🔗 문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="내-풀이"&gt;내 풀이&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -136,10 +195,18 @@ return answer;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id="다른-사람-풀이"&gt;다른 사람 풀이&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;조건문 안에서 &lt;code&gt;++&lt;/code&gt;, &lt;code&gt;--&lt;/code&gt; 연산을 해도 총 인원에 영향을 주지 않기 때문에 &lt;code&gt;answer&lt;/code&gt;를 미리 &lt;code&gt;n&lt;/code&gt;으로 설정하고, 못빌리는 것이 확정일 때 &lt;code&gt;n--&lt;/code&gt; 해주는 접근이 좋았다. 시간 복잡도가 상수배 이라서 큰 영향은 없을 수 있지만, states 전체를 순회하면서 카운팅하는 부분을 제외하면 루프 한 번을 덜 돌아도 됐었다.
-그리고 배열의 크기를 n + 2로 지정해줬기 때문에 굳이 do-while을 쓰지 않아도 됐었다.&lt;/p&gt;</description></item><item><title>똑똑똑, 이사왔어요~ 🛻💨</title><link>http://yeniful.github.io/posts/2025042500_%EC%9D%B4%EC%82%AC/</link><pubDate>Fri, 25 Apr 2025 15:06:46 +0900</pubDate><guid>http://yeniful.github.io/posts/2025042500_%EC%9D%B4%EC%82%AC/</guid><description>&lt;p&gt;&lt;img alt="이사떡" loading="lazy" src="http://yeniful.github.io/images/Sirutteok.jpg"&gt;&lt;/p&gt;
+그리고 배열의 크기를 n + 2로 지정해줬기 때문에 굳이 do-while을 쓰지 않아도 됐었다.&lt;/p&gt;</description></item><item><title>똑똑똑, 이사왔어요~ 🛻💨</title><link>http://yeniful.github.io/posts/2025/20250425_%EC%9D%B4%EC%82%AC/</link><pubDate>Fri, 25 Apr 2025 15:06:46 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250425_%EC%9D%B4%EC%82%AC/</guid><description>&lt;p&gt;&lt;img alt="이사떡" loading="lazy" src="http://yeniful.github.io/images/Sirutteok.jpg"&gt;&lt;/p&gt;
 &lt;h3 id="다시-돌아온-깃허브-블로그-반가워요-"&gt;다시 돌아온 깃허브 블로그 반가워요 👋&lt;/h3&gt;
 &lt;p&gt;안녕하세요, 예니입니다-! 👻 (주섬주섬 이사떡을 꺼낸다)&lt;/p&gt;
 &lt;p&gt;작년부터 Medium에서 글쓰기를 다시 시작하기도 했고, 기록에 대한 중요성을 느껴서 기술 블로그를 다시 운영해보려고 합니다.
 오래 전부터 깃허브 블로그 운영을 여러 차례 시도했지만, 매번 손을 놓아버리게 되었어요.
 초기 세팅만 열심히&amp;hellip;🎨 하다가 글쓰기 복잡도가 증가하면 글을 잘 올리지 않게 되었는데, 예쁜 디자인 다 필요 없고 일단 기본 테마로 꾸준히 써보라는 개발자 M님의 조언을 다시 한 번 되새겨봅니다.&lt;/p&gt;
-&lt;p&gt;티스토리부터 시작해서 Velog, DevTO, Hashnode, Substack 등 여러 해외 개발자 블로그 플랫폼들도 경험해봤습니다. WordPress나 Wix같이 유료 서비스 빼고 거의 다 써봤는데 정착하고 싶은 곳이 정말정말 없더라구요. 🥲 무엇보다도 많은 서비스들이 빠르게 생기고, 빠르게 사라지기에 플랫폼 의존이 덜 한 도구를 선택하고 싶었어요.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;티스토리부터 시작해서 Velog, DevTO, Hashnode, Substack 등 여러 해외 개발자 블로그 플랫폼들도 경험해봤습니다. WordPress나 Wix같이 유료 서비스 빼고 거의 다 써봤는데 정착하고 싶은 곳이 정말정말 없더라구요. 🥲 무엇보다도 많은 서비스들이 빠르게 생기고, 빠르게 사라지기에 플랫폼 의존이 덜 한 도구를 선택하고 싶었어요.&lt;/p&gt;</description></item><item><title>[SwiftUI] struct View vs @ViewBuilder 함수, 뭐가 다를까?</title><link>http://yeniful.github.io/posts/2025/20250301_swiftuiview/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250301_swiftuiview/</guid><description>&lt;h2 id="모티베이션"&gt;모티베이션&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;재사용되는 View를 구조체로 빼야 하나, 아니면 그냥 함수로 만들어도 될까?&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;View를 만들 때 특별한 기준 없이 View를 만들 때 습관적으로 구조체를 만들거나, 간단한 건 함수로 처리하곤 했는데요. 앱의 구조와 성능, 유지보수 방식에 꽤 중요한 영향을 준다는 것을 알게 되었고, 간단한 내용이지만 한 번 정리해보고 싶었습니다.&lt;/p&gt;
+&lt;p&gt;그래서 이번 글에서는 Apple 공식 문서와 WWDC 세션에서 강조한 원리를 바탕으로 &lt;strong&gt;struct View vs. @ViewBuilder 함수&lt;/strong&gt;의 차이를 정리해보려고 합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="두-가지-방식-살펴보기"&gt;두 가지 방식 살펴보기&lt;/h2&gt;
+&lt;p&gt;먼저 동일한 UI를 두 가지 방식으로 만들어봤습니다.&lt;/p&gt;</description></item></channel></rss>
