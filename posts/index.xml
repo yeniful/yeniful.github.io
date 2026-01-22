@@ -57,7 +57,25 @@
 &lt;li&gt;
 &lt;p&gt;구현:&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>[UIKit] Scene Delegate</title><link>http://yeniful.github.io/posts/2026/apple/scene-delegate/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/scene-delegate/</guid><description>iOS 13부터 도입된 SceneDelegate의 역할, 도입 배경, 각 메서드의 동작 원리 알아보기.</description></item><item><title>[PS/BOJ/BFS] 1012. 유기농 배추</title><link>http://yeniful.github.io/posts/2025/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
+&lt;/ul&gt;</description></item><item><title>[Swift]weak self</title><link>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;클로저 안에 weak self 있는 경우 많음&lt;/p&gt;
+&lt;p&gt;self: 클래스 인스턴스 참조&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일반적으로 클로저는 클로저 내부에서 변수를 사용할 때 암시적으로 변수를 캡처하지만, 이 경우에는 명시적으로 작성해야 합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;self&lt;/code&gt;를 캡처하려면, 사용할 때 명시적으로 &lt;code&gt;self&lt;/code&gt;를 작성하거나, 클로저의 캡처 리스트에 &lt;code&gt;self&lt;/code&gt;를 포함합니다. &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;self&lt;/code&gt;를 명시적으로 작성하는 것은 의도를 분명하게 표현하고, 참조 순환이 없음을 확인하도록 유도하는 역할도 합니다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="capture-values"&gt;Capture Values&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;클로저는 정의된 주변 컨텍스트로부터 상수와 변수를 캡처할 수 있음.&lt;/li&gt;
+&lt;li&gt;상수와 변수를 정의한 원래 범위가 더이상 존재하지 않더라도 본문 내에서 상수와 변수의 값을 참조하고 수정할 수 있음.&lt;/li&gt;
+&lt;li&gt;값을 캡처할 수 있는 가장 간단한 클로저 형태는 다른 함수의 본문 내에 작성하는 중첩 함수
+&lt;ul&gt;
+&lt;li&gt;중첩 함수는 바깥 함수의 어떠한 인자도 캡처할 수 있고 바깥 함수 내에 정의된 상수와 변수를 캡처할 수도 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://bbiguduk.github.io/swift-book-korean/documentation/the-swift-programming-language-korean/closures/#"&gt;https://bbiguduk.github.io/swift-book-korean/documentation/the-swift-programming-language-korean/closures/#&lt;/a&gt;탈출-클로저-Escaping-Closures&lt;/p&gt;</description></item><item><title>[UIKit] Scene Delegate</title><link>http://yeniful.github.io/posts/2026/apple/scene-delegate/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/scene-delegate/</guid><description>iOS 13부터 도입된 SceneDelegate의 역할, 도입 배경, 각 메서드의 동작 원리 알아보기.</description></item><item><title>[PS/BOJ/BFS] 1012. 유기농 배추</title><link>http://yeniful.github.io/posts/2025/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;문제 : &lt;a href="https://www.acmicpc.net/problem/1012"&gt;유기농 배추&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;접근 : DFS/BFS&lt;/li&gt;
