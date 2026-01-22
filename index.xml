@@ -57,7 +57,7 @@
 &lt;li&gt;
 &lt;p&gt;구현:&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>[PS/BOJ/BFS] 1012. 유기농 배추</title><link>http://yeniful.github.io/posts/2025/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
+&lt;/ul&gt;</description></item><item><title>[UIKit] Scene Delegate</title><link>http://yeniful.github.io/posts/2026/apple/scene-delegate/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/scene-delegate/</guid><description>iOS 13부터 도입된 SceneDelegate의 역할, 도입 배경, 각 메서드의 동작 원리 알아보기.</description></item><item><title>[PS/BOJ/BFS] 1012. 유기농 배추</title><link>http://yeniful.github.io/posts/2025/20250930_boj/</link><pubDate>Tue, 30 Sep 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250930_boj/</guid><description>&lt;h2 id="문제-탐색"&gt;문제 탐색&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;문제 : &lt;a href="https://www.acmicpc.net/problem/1012"&gt;유기농 배추&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;접근 : DFS/BFS&lt;/li&gt;
