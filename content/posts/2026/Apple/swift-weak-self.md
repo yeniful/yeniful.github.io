@@ -2,7 +2,7 @@
 title = '[Swift] weak self'
 date = 2026-01-01T00:00:00+09:00
 draft = false
-tags =  ["Swift, "Apple", "iOS"]
+tags =  ["Apple", "Swift", "iOS"]
 categories = ["Apple Platforms"]
 summary = ""
 +++

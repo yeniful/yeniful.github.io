@@ -17,8 +17,8 @@ theme = "PaperMod"
 
     # 메인 프로필
     [params.homeInfoParams]
-        Title = "Code by day, people by heart 💙📱"
-        Content = "Bridging People and Technology✨"
+        Title = "Petit à petit 🔨✒️📱"
+        Content = "1% Improvement Everyday✨"
 
     [[params.socialIcons]]
         name = "GitHub"
