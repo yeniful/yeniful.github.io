@@ -1,6 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Apple Platforms on @yeniful blog</title><link>http://yeniful.github.io/categories/apple-platforms/</link><description>Recent content in Apple Platforms on @yeniful blog</description><generator>Hugo -- 0.154.5</generator><language>en-us</language><lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/categories/apple-platforms/index.xml" rel="self" type="application/rss+xml"/><item><title>[UIKit] ViewController 생명주기 (View Controller Life Cycle)</title><link>http://yeniful.github.io/posts/2026/20260117_viewcontroller_lifecycle/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/20260117_viewcontroller_lifecycle/</guid><description>iOS ViewController의 생명주기 메서드와 Push/Pop, Present/Dismiss 상황별 호출 순서를 정리합니다.</description></item><item><title>[Swift]weak self</title><link>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
-&lt;p&gt;클로저 안에 weak self 있는 경우 많음&lt;/p&gt;
-&lt;p&gt;self: 클래스 인스턴스 참조&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Apple Platforms on @yeniful blog</title><link>http://yeniful.github.io/categories/apple-platforms/</link><description>Recent content in Apple Platforms on @yeniful blog</description><generator>Hugo -- 0.154.5</generator><language>en-us</language><lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/categories/apple-platforms/index.xml" rel="self" type="application/rss+xml"/><item><title>[UIKit] ViewController 생명주기 (View Controller Life Cycle)</title><link>http://yeniful.github.io/posts/2026/20260117_viewcontroller_lifecycle/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/20260117_viewcontroller_lifecycle/</guid><description>iOS ViewController의 생명주기 메서드와 Push/Pop, Present/Dismiss 상황별 호출 순서를 정리합니다.</description></item><item><title>[Swift] weak self</title><link>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;클로저 안의 weak self&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;self: 클래스 인스턴스 참조&lt;/li&gt;
+&lt;li&gt;약한 참조&lt;/li&gt;
+&lt;li&gt;ARC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="note"&gt;Note&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;일반적으로 클로저는 클로저 내부에서 변수를 사용할 때 암시적으로 변수를 캡처하지만, 이 경우에는 명시적으로 작성해야 합니다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;self&lt;/code&gt;를 캡처하려면, 사용할 때 명시적으로 &lt;code&gt;self&lt;/code&gt;를 작성하거나, 클로저의 캡처 리스트에 &lt;code&gt;self&lt;/code&gt;를 포함합니다. &lt;/li&gt;
