@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Collection on @yeniful blog</title><link>http://yeniful.github.io/tags/collection/</link><description>Recent content in Collection on @yeniful blog</description><generator>Hugo -- 0.154.5</generator><language>en-us</language><lastBuildDate>Sat, 14 Jun 2025 21:33:55 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/collection/index.xml" rel="self" type="application/rss+xml"/><item><title>[Java] Java의 Collection Framework (컬렉션 프레임워크)를 알아보자!</title><link>http://yeniful.github.io/posts/2025/20250614_java/</link><pubDate>Sat, 14 Jun 2025 21:33:55 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250614_java/</guid><description>&lt;p&gt;최근 C++과 Java 두 언어를 살펴보면서 자료구조 라이브러리(각각 STL과 컬렉션 프레임워크)에서 느껴지는 차이점이 흥미로웠습니다.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Collection on @yeniful blog</title><link>http://yeniful.github.io/tags/collection/</link><description>Recent content in Collection on @yeniful blog</description><generator>Hugo -- 0.154.5</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/collection/index.xml" rel="self" type="application/rss+xml"/><item><title>[Swift] 딕셔너리 (Dictionary) 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/swift-dictionary/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-dictionary/</guid><description>&lt;h2 id="설명"&gt;설명&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-Value 저장하는 컬렉션 타입&lt;/li&gt;
+&lt;li&gt;해시 테이블로 구현되어있음
+&lt;ul&gt;
+&lt;li&gt;빠른 속도로 접근, 수정, 추가, 키 존재 여부 확인 가능 O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;let scores = [&amp;#34;roy&amp;#34;: 95, &amp;#34;gucci&amp;#34;: 82, &amp;#34;yeni&amp;#34;: 90]
+// 모두 O(1) 시간
+let royScore = scores[&amp;#34;roy&amp;#34;] // 95
+let gucciScore = scores[&amp;#34;gucci&amp;#34;] // 82
+scores[&amp;#34;terry&amp;#34;] = 75 // 추가
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="유의"&gt;유의&lt;/h2&gt;
+&lt;h3 id="제거시-on의-가능성"&gt;제거시 O(n)의 가능성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;값 제거 (removeValue(forKey: key))의 경우 기술적으로는 O(1)로 구현되어 있음&lt;/li&gt;
+&lt;li&gt;하지만 Copy-On-Write 최적화 때문에 O(n) 복잡도를 가질 수 있음.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;// 첫 번째 Dictionary
+var dict1 = [&amp;#34;a&amp;#34;: 1, &amp;#34;b&amp;#34;: 2, &amp;#34;c&amp;#34;: 3]
+// dict2는 dict1과 메모리를 공유 (Copy-on-Write)
+var dict2 = dict1
+// 이 제거 연산은 dict1을 수정하기 전에 전체 복사가 필요할 수 있음 (O(n))
+dict1.removeValue(forKey: &amp;#34;a&amp;#34;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="활용"&gt;활용&lt;/h2&gt;
+&lt;h3 id="key-존재-확인"&gt;Key 존재 확인&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;// 👍 O(1) : 직접 접근해서 확인
+if dict[&amp;#34;key&amp;#34;] != nil { ... }
+// 😱 O(n) : 배열로 변환 후 순회하기 때문에 비효율적이다.
+if dict.keys.contains(&amp;#34;yeni&amp;#34;) { ... }
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="value-조회"&gt;Value 조회&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;// 👍 O(1) : 해시 기반 직접 조회
+let value = scores[&amp;#34;yeni&amp;#34;]
+// 🤩 값이 없을 수도 있으므로 Optional 처리가 필요하다.
+if let score = scores[&amp;#34;yeni&amp;#34;] {
+print(&amp;#34;Alice&amp;#39;s score: \(score)&amp;#34;)
+}
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>[Java] Java의 Collection Framework (컬렉션 프레임워크)를 알아보자!</title><link>http://yeniful.github.io/posts/2025/20250614_java/</link><pubDate>Sat, 14 Jun 2025 21:33:55 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250614_java/</guid><description>&lt;p&gt;최근 C++과 Java 두 언어를 살펴보면서 자료구조 라이브러리(각각 STL과 컬렉션 프레임워크)에서 느껴지는 차이점이 흥미로웠습니다.
 언어별로 용어가 다르거나 인터페이스가 달라 헷갈리는 경우도 있었고, 알게된 것들을 더 잘 기억하기 위해 Java의 컬렉션(Collection) 프레임워크에 대해 간단하게 정리해보겠습니다 :)&lt;/p&gt;
 &lt;h2 id="collection이란"&gt;Collection이란?&lt;/h2&gt;
 &lt;p&gt;Java에서 &lt;strong&gt;컬렉션(Collection)&lt;/strong&gt; 은 데이터(객체)를 담고 관리하는 그릇, 즉 컨테이너(container) 역할을 하는 패키지입니다.

@@ -8,7 +8,32 @@
 &lt;/ul&gt;
 &lt;h3 id="code-first"&gt;Code First&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;요구사항 확인 → 기능 개발 → 테스트 코드 작성 → 테스트 실행&lt;/p&gt;</description></item><item><title>[Swift] weak self</title><link>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;요구사항 확인 → 기능 개발 → 테스트 코드 작성 → 테스트 실행&lt;/p&gt;</description></item><item><title>[Apple Platforms] Apple 플랫폼 개발에서의 캐싱 (Caching) 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/apple-platforms-caching/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/apple-platforms-caching/</guid><description>iOS ViewController의 생명주기 메서드와 Push/Pop, Present/Dismiss 상황별 호출 순서를 정리합니다.</description></item><item><title>[UIKit] ViewController 생명주기 (View Controller Life Cycle)</title><link>http://yeniful.github.io/posts/2026/apple/uikit-view-controller-life-cycle/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/uikit-view-controller-life-cycle/</guid><description>iOS ViewController의 생명주기 메서드와 Push/Pop, Present/Dismiss 상황별 호출 순서를 정리합니다.</description></item><item><title>[Apple Platforms] 앱 생명 주기 (App Life Cycle) 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/apple-app-life-cycle/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/apple-app-life-cycle/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;앱 생명주기: 앱이 실행되는 시점부터 종료되는 시점까지 거치는 여러 상태의 순환 과정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ios-앱의-5가지-상태"&gt;iOS 앱의 5가지 상태&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Not Running (실행되지 않음)&lt;/li&gt;
+&lt;li&gt;Inactive (비활성)&lt;/li&gt;
+&lt;li&gt;Active (활성)&lt;/li&gt;
+&lt;li&gt;Background (백그라운드)&lt;/li&gt;
+&lt;li&gt;Suspended (일시 중지)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="swiftui에서의-앱-생명주기"&gt;SwiftUI에서의 앱 생명주기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SwiftUI에서 앱은 &lt;code&gt;@main&lt;/code&gt; attribute로 표시된 구조체에서 시작.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UIApplicationMain&lt;/code&gt;의 대체&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Swift" data-lang="Swift"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;struct&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;MyApp&lt;/span&gt;: App {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; body: some Scene {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; WindowGroup {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ContentView()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>[Swift] weak self 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-weak-self/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;클로저 안의 weak self&lt;/li&gt;
 &lt;/ul&gt;
@@ -34,7 +59,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://bbiguduk.github.io/swift-book-korean/documentation/the-swift-programming-language-korean/closures/#"&gt;https://bbiguduk.github.io/swift-book-korean/documentation/the-swift-programming-language-korean/closures/#&lt;/a&gt;탈출-클로저-Escaping-Closures&lt;/p&gt;</description></item><item><title>[UIKit] Scene Delegate</title><link>http://yeniful.github.io/posts/2026/apple/scene-delegate/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/scene-delegate/</guid><description>iOS 13부터 도입된 SceneDelegate의 역할, 도입 배경, 각 메서드의 동작 원리 알아보기.</description></item><item><title>[SwiftUI] struct View vs @ViewBuilder 함수, 뭐가 다를까?</title><link>http://yeniful.github.io/posts/2025/20250301_swiftuiview/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250301_swiftuiview/</guid><description>&lt;h2 id="모티베이션"&gt;모티베이션&lt;/h2&gt;
+&lt;h3 id="references-"&gt;References 👀&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://bbiguduk.github.io/swift-book-korean/documentation/the-swift-programming-language-korean/closures/#%ED%83%88%EC%B6%9C-%ED%81%B4%EB%A1%9C%EC%A0%80-Escaping-Closures"&gt;Swift Programming Language - 탈출 클로저&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[UIKit] Scene Delegate</title><link>http://yeniful.github.io/posts/2026/apple/scene-delegate/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/scene-delegate/</guid><description>iOS 13부터 도입된 SceneDelegate의 역할, 도입 배경, 각 메서드의 동작 원리 알아보기.</description></item><item><title>[SwiftUI] struct View vs @ViewBuilder 함수, 뭐가 다를까?</title><link>http://yeniful.github.io/posts/2025/20250301_swiftuiview/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2025/20250301_swiftuiview/</guid><description>&lt;h2 id="모티베이션"&gt;모티베이션&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;재사용되는 View를 구조체로 빼야 하나, 아니면 그냥 함수로 만들어도 될까?&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;

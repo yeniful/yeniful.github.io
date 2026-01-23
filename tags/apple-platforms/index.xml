@@ -8,4 +8,68 @@
 &lt;/ul&gt;
 &lt;h3 id="code-first"&gt;Code First&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;요구사항 확인 → 기능 개발 → 테스트 코드 작성 → 테스트 실행&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;요구사항 확인 → 기능 개발 → 테스트 코드 작성 → 테스트 실행&lt;/p&gt;</description></item><item><title>[Apple Platforms] Apple 플랫폼 개발에서의 캐싱 (Caching) 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/apple-platforms-caching/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/apple-platforms-caching/</guid><description>iOS ViewController의 생명주기 메서드와 Push/Pop, Present/Dismiss 상황별 호출 순서를 정리합니다.</description></item><item><title>[UIKit] ViewController 생명주기 (View Controller Life Cycle)</title><link>http://yeniful.github.io/posts/2026/apple/uikit-view-controller-life-cycle/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/uikit-view-controller-life-cycle/</guid><description>iOS ViewController의 생명주기 메서드와 Push/Pop, Present/Dismiss 상황별 호출 순서를 정리합니다.</description></item><item><title>[Apple Platforms] 앱 생명 주기 (App Life Cycle) 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/apple-app-life-cycle/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/apple-app-life-cycle/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;앱 생명주기: 앱이 실행되는 시점부터 종료되는 시점까지 거치는 여러 상태의 순환 과정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ios-앱의-5가지-상태"&gt;iOS 앱의 5가지 상태&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Not Running (실행되지 않음)&lt;/li&gt;
+&lt;li&gt;Inactive (비활성)&lt;/li&gt;
+&lt;li&gt;Active (활성)&lt;/li&gt;
+&lt;li&gt;Background (백그라운드)&lt;/li&gt;
+&lt;li&gt;Suspended (일시 중지)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="swiftui에서의-앱-생명주기"&gt;SwiftUI에서의 앱 생명주기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SwiftUI에서 앱은 &lt;code&gt;@main&lt;/code&gt; attribute로 표시된 구조체에서 시작.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UIApplicationMain&lt;/code&gt;의 대체&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Swift" data-lang="Swift"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@main
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;struct&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;MyApp&lt;/span&gt;: App {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; body: some Scene {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; WindowGroup {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ContentView()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>[Swift] 딕셔너리 (Dictionary) 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/swift-dictionary/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-dictionary/</guid><description>&lt;h2 id="설명"&gt;설명&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-Value 저장하는 컬렉션 타입&lt;/li&gt;
+&lt;li&gt;해시 테이블로 구현되어있음
+&lt;ul&gt;
+&lt;li&gt;빠른 속도로 접근, 수정, 추가, 키 존재 여부 확인 가능 O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;let scores = [&amp;#34;roy&amp;#34;: 95, &amp;#34;gucci&amp;#34;: 82, &amp;#34;yeni&amp;#34;: 90]
+// 모두 O(1) 시간
+let royScore = scores[&amp;#34;roy&amp;#34;] // 95
+let gucciScore = scores[&amp;#34;gucci&amp;#34;] // 82
+scores[&amp;#34;terry&amp;#34;] = 75 // 추가
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="유의"&gt;유의&lt;/h2&gt;
+&lt;h3 id="제거시-on의-가능성"&gt;제거시 O(n)의 가능성&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;값 제거 (removeValue(forKey: key))의 경우 기술적으로는 O(1)로 구현되어 있음&lt;/li&gt;
+&lt;li&gt;하지만 Copy-On-Write 최적화 때문에 O(n) 복잡도를 가질 수 있음.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;// 첫 번째 Dictionary
+var dict1 = [&amp;#34;a&amp;#34;: 1, &amp;#34;b&amp;#34;: 2, &amp;#34;c&amp;#34;: 3]
+// dict2는 dict1과 메모리를 공유 (Copy-on-Write)
+var dict2 = dict1
+// 이 제거 연산은 dict1을 수정하기 전에 전체 복사가 필요할 수 있음 (O(n))
+dict1.removeValue(forKey: &amp;#34;a&amp;#34;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="활용"&gt;활용&lt;/h2&gt;
+&lt;h3 id="key-존재-확인"&gt;Key 존재 확인&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;// 👍 O(1) : 직접 접근해서 확인
+if dict[&amp;#34;key&amp;#34;] != nil { ... }
+// 😱 O(n) : 배열로 변환 후 순회하기 때문에 비효율적이다.
+if dict.keys.contains(&amp;#34;yeni&amp;#34;) { ... }
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="value-조회"&gt;Value 조회&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;// 👍 O(1) : 해시 기반 직접 조회
+let value = scores[&amp;#34;yeni&amp;#34;]
+// 🤩 값이 없을 수도 있으므로 Optional 처리가 필요하다.
+if let score = scores[&amp;#34;yeni&amp;#34;] {
+print(&amp;#34;Alice&amp;#39;s score: \(score)&amp;#34;)
+}
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
