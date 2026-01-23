@@ -3,7 +3,7 @@ title = '[Apple Platforms] Testing 🖋️'
 date = 2026-01-23T00:00:00+09:00
 draft = false
 tags =  ["Apple Platforms", "iOS"]
-categories = ["Apple"]
+categories = ["Apple Platforms"]
 summary = ""
 +++
 
@@ -39,7 +39,7 @@ summary = ""
 	- TDD는 개발자 관점에서 코드의 정확성과 성능을, BDD는 사용자/비즈니스 관점에서 요구사항 충족을 검증한다.
 - 둘 다 함께 쓰는 방법도 생각했는데, 검증하려는 영역이 여러 테스트 코드에 걸쳐 중복되거나 테스트 코드 작성에만 시간이 과도하게 쏟아질 위험(본말전도)도 있어 균형이 필요하겠다는 고민도 남았다.
 
-## AI 시대의 테스팅
+### AI 시대의 테스팅
 - AI 시대에 테스트 코드가 어떤 의미있는지 궁금해져서 영상을 찾아보다가 2025년 6월 켄트백의 TDD 토크를 발견했다.
 - [TDD, AI agent and coding with Kent Beck](https://www.youtube.com/watch?v=aSXaxOdVtAQ&t) 내용을 짧게 요약하자면 다음과 같다.
 - AI 시대의 사고방식:
@@ -48,7 +48,7 @@ summary = ""
 	- **실험의 양적 증가**가 경쟁 우위
 		- 코드 양이 증가함에 따라 **탐색된 아이디어의 양**이 중요 
 		- **"모든 것을 실험"** 해봐야 하는 시대
-![[Screenshot 2026-01-23 at 19.45.17.png]]
+![[apple-testing-1.png]]
 - [켄트 백의 증강형 코딩 후기](https://www.stdy.blog/warning-signs-for-off-track-ai-and-tdd-system-prompts-by-kent-beck/) 번역도 재미있게 읽었다. (+ TDD를 위한 프롬프트)
 	- 야크털 깎기(yak shaving)라는 표현 재밌다.
 
@@ -68,11 +68,11 @@ summary = ""
 
 
 
-## References
-[Apple Developer Testing](https://developer.apple.com/documentation/xcode/testing)
-[TDD, AI Agents and Coding - 켄트백 원문](https://newsletter.pragmaticengineer.com/p/tdd-ai-agents-and-coding-with-kent)
-[TDD, AI Agents and Coding - 켄트백 번역 및 요약 (Geeknews)](https://news.hada.io/topic?id=21446)
-[iOS 개발자의 쉽게 쓰는 테스트코드, TDD의 생활화(1)-구조와 방식](https://medium.com/bejewel/ios-개발자의-쉽게-쓰는-테스트코드-tdd의-생활화-1-구조와-방식-c5609aa8b886)
-[뱅크샐러드 iOS팀이 숨쉬듯이 테스트코드 짜는 방식 1편 - 통합 UI테스트](https://blog.banksalad.com/tech/test-in-banksalad-ios-1/)
-[실전에서 TDD하기](https://tech.kakaopay.com/post/implementing-tdd-in-practical-applications/)
-[가독성 좋은 테스트 코드를 작성하는 방법](https://yozm.wishket.com/magazine/detail/2435/)
+### References 👀
+- [Apple Developer Testing](https://developer.apple.com/documentation/xcode/testing) 
+- [TDD, AI Agents and Coding - 켄트백 원문](https://newsletter.pragmaticengineer.com/p/tdd-ai-agents-and-coding-with-kent) 
+- [TDD, AI Agents and Coding - 켄트백 번역 및 요약 (Geeknews)](https://news.hada.io/topic?id=21446) 
+- [iOS 개발자의 쉽게 쓰는 테스트코드, TDD의 생활화(1)-구조와 방식](https://medium.com/bejewel/ios-개발자의-쉽게-쓰는-테스트코드-tdd의-생활화-1-구조와-방식-c5609aa8b886) 
+- [뱅크샐러드 iOS팀이 숨쉬듯이 테스트코드 짜는 방식 1편 - 통합 UI테스트](https://blog.banksalad.com/tech/test-in-banksalad-ios-1/) 
+- [실전에서 TDD하기](https://tech.kakaopay.com/post/implementing-tdd-in-practical-applications/) 
+- [가독성 좋은 테스트 코드를 작성하는 방법](https://yozm.wishket.com/magazine/detail/2435/) 

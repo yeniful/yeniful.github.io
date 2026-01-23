@@ -1,5 +1,5 @@
 +++
-title = '[Swift] weak self'
+title = '[Swift] weak self 🖋️'
 date = 2026-01-01T00:00:00+09:00
 draft = false
 tags =  ["Apple", "Swift", "iOS"]
@@ -25,5 +25,5 @@ summary = ""
 - 상수와 변수를 정의한 원래 범위가 더이상 존재하지 않더라도 본문 내에서 상수와 변수의 값을 참조하고 수정할 수 있음.
 - 값을 캡처할 수 있는 가장 간단한 클로저 형태는 다른 함수의 본문 내에 작성하는 중첩 함수
 	- 중첩 함수는 바깥 함수의 어떠한 인자도 캡처할 수 있고 바깥 함수 내에 정의된 상수와 변수를 캡처할 수도 있습니다.
-
-https://bbiguduk.github.io/swift-book-korean/documentation/the-swift-programming-language-korean/closures/#탈출-클로저-Escaping-Closures
+### References 👀
+- [Swift Programming Language - 탈출 클로저](https://bbiguduk.github.io/swift-book-korean/documentation/the-swift-programming-language-korean/closures/#탈출-클로저-Escaping-Closures)
