@@ -60,11 +60,32 @@ summary = ""
 - 테스트 코드의 목적
 - Testing의 종류
 - Apple Platforms 개발에서의 testing frameworks
-	- Swift Testing
 	- XCTest
+	- Swift Testing
 - 좋은 테스트 작성 팁
 
 
+
+## XCTest
+설명
+- Xcode 프로젝트에서 단위 테스트(Unit Test)를 작성하고, Xcode의 테스트 워크플로와 원활하게 통합되도록 설계된 Apple 공식 테스트 프레임워크.
+역할
+- 코드 실행 중 특정 조건이 충족되는지 검증하고, 조건이 만족되지 않으면 실패 기록.
+- 코드 블록의 성능을 측정하여 성능 회귀 여부를 확인하는 성능 테스트를 제공.
+- XCUIAutomation과 함께 사용할 경우, 앱의 UI를 자동으로 조작하여 실제 사용자 흐름을 검증하는 UI 테스트를 작성 가능
+기본 구조
+- XCTestCase를 상속한 테스트 케이스 타입을 만들고, 이름이  test 로 시작하는 메서드를 정의. 
+- 해당 메서드를 개별 테스트로 인식.
+- 테스트 메서드 안에서  XCTAssertEqual,  XCTAssertTrue  등 다양한 assertion 함수를 사용해 기대 값과 실제 값을 비교
+Xcode와의 통합
+- 테스트는 Xcode 내에서 빌드-실행-결과 확인까지 한 흐름으로 처리
+- Test navigator나 스킴에서 손쉽게 실행 가능
+- UI 자동화 테스트는 여러 기기, 언어, 지역 설정, 환경 조건에서 재실행 가능
+- 사용자 경험을 폭넓게 검증하는 데 활용
+Swift Testing과의 관계
+- Swift Testing은 새로운 테스트 프레임워크
+- XCTest와 비슷한 기능을 제공하지만 다른 문법과 동시성 모델을 사용.
+	- UI 자동화(XCUIApplication 등)나 성능 메트릭(XCTMetric 등)을 사용하는 테스트, Objective-C 기반 테스트는 여전히 XCTest를 사용해야 함
 
 
 
