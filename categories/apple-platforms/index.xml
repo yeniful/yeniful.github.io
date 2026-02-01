@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Apple Platforms on @yeniful blog</title><link>http://yeniful.github.io/categories/apple-platforms/</link><description>Recent content in Apple Platforms on @yeniful blog</description><generator>Hugo -- 0.155.0</generator><language>en-us</language><lastBuildDate>Fri, 23 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/categories/apple-platforms/index.xml" rel="self" type="application/rss+xml"/><item><title>[Apple Platforms] Testing 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/apple-testing/</link><pubDate>Fri, 23 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/apple-testing/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Apple Platforms on @yeniful blog</title><link>http://yeniful.github.io/categories/apple-platforms/</link><description>Recent content in Apple Platforms on @yeniful blog</description><generator>Hugo -- 0.155.1</generator><language>en-us</language><lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/categories/apple-platforms/index.xml" rel="self" type="application/rss+xml"/><item><title>[Swift] MainActor 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/swift-mainactor/</link><pubDate>Fri, 30 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/swift-mainactor/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;iOS 개발에서 UI 업데이트는 &lt;strong&gt;반드시 메인 스레드&lt;/strong&gt;에서 해야 하지만, Swift Concurrency 도입 후 백그라운드 Task 내에서 UI를 직접 업데이트하는 실수가 쉬워졌다. @MainActor는 컴파일 타임부터 이 문제를 구조적으로 해결해 준다. 이 글에서 MainActor에 대해 다뤄보려고 한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-Swift" data-lang="Swift"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Task { &lt;span style="color:#75715e"&gt;// 백그라운드 Task (Global Actor)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;let&lt;/span&gt; data = await fetchUser()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; userNameLabel.text = data.name &lt;span style="color:#75715e"&gt;// UI 업데이트 (MainActor 필요!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;h2 id="1-mainactor는-언제-필요할까-문제-상황"&gt;1. MainActor는 언제 필요할까? (문제 상황)&lt;/h2&gt;
+&lt;h3 id="1-1-uikit의-메인-스레드-제약"&gt;1-1. UIKit의 메인 스레드 제약&lt;/h3&gt;
+&lt;h3 id="1-2-gcd의-한계-dispatchqueuemainasync"&gt;1-2. GCD의 한계 (DispatchQueue.main.async)&lt;/h3&gt;
+&lt;h3 id="1-3-swift-concurrency의-함정-task--ui-섞기"&gt;1-3. Swift Concurrency의 함정 (Task + UI 섞기)&lt;/h3&gt;
+&lt;h2 id="2-mainactor-기본-개념"&gt;2. MainActor 기본 개념&lt;/h2&gt;
+&lt;h3 id="2-1-mainactor-알기-전-actor가-무엇인지"&gt;2-1. MainActor 알기 전 Actor가 무엇인지&lt;/h3&gt;
+&lt;h3 id="2-2-global-actor와-mainactor"&gt;2-2. Global Actor와 MainActor&lt;/h3&gt;
+&lt;h3 id="2-3-mainactor-속성의-의미"&gt;2-3. &lt;code&gt;@MainActor&lt;/code&gt; 속성의 의미&lt;/h3&gt;
+&lt;h2 id="3-사용법"&gt;3. 사용법&lt;/h2&gt;
+&lt;h3 id="3-1-함수프로퍼티에-적용"&gt;3-1. 함수/프로퍼티에 적용&lt;/h3&gt;
+&lt;h3 id="3-2-클래스-전체에-적용-viewmodel-패턴"&gt;3-2. 클래스 전체에 적용 (ViewModel 패턴)&lt;/h3&gt;
+&lt;h3 id="3-3-swiftui와의-완벽-호환-published"&gt;3-3. SwiftUI와의 완벽 호환 (@Published)&lt;/h3&gt;
+&lt;h2 id="4-task와-함께-사용"&gt;4. Task와 함께 사용&lt;/h2&gt;
+&lt;h3 id="4-1-task--mainactor-in-"&gt;4-1. &lt;code&gt;Task { @MainActor in }&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id="4-2-await-mainactorrun--"&gt;4-2. &lt;code&gt;await MainActor.run { }&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id="4-3-taskdetached--mainactor-전환"&gt;4-3. &lt;code&gt;Task.detached&lt;/code&gt; + MainActor 전환&lt;/h3&gt;
+&lt;h2 id="5-더-알아보기"&gt;5. 더 알아보기&lt;/h2&gt;
+&lt;h3 id="5-1-nonisolated-탈출구"&gt;5-1. &lt;code&gt;nonisolated&lt;/code&gt; 탈출구&lt;/h3&gt;
+&lt;h3 id="5-2-sendable과-데이터-전달"&gt;5-2. &lt;code&gt;@Sendable&lt;/code&gt;과 데이터 전달&lt;/h3&gt;
+&lt;h3 id="5-3-mainactor-호핑-최적화"&gt;5-3. MainActor 호핑 최적화&lt;/h3&gt;
+&lt;h2 id="6-mainactor와-dispatchqueue-비교"&gt;6. MainActor와 DispatchQueue 비교&lt;/h2&gt;
+&lt;h3 id="6-1-mainactor-vs-dispatchqueuemain"&gt;6-1. &lt;code&gt;@MainActor&lt;/code&gt; vs &lt;code&gt;DispatchQueue.main&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id="6-2-다른-글로벌-액터와-비교"&gt;6-2. 다른 글로벌 액터와 비교&lt;/h3&gt;
+&lt;h3 id="references-"&gt;References 👀&lt;/h3&gt;</description></item><item><title>[Apple Platforms] Testing 🖋️</title><link>http://yeniful.github.io/posts/2026/apple/apple-testing/</link><pubDate>Fri, 23 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple/apple-testing/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;h3 id="기능을-완전하게-구현하려면"&gt;기능을 완전하게 구현하려면?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;최근 과제 전형을 마치고 제출했던 코드를 다시 살펴보았다.&lt;/li&gt;

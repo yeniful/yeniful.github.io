@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Openclaw on @yeniful blog</title><link>http://yeniful.github.io/tags/openclaw/</link><description>Recent content in Openclaw on @yeniful blog</description><generator>Hugo -- 0.155.1</generator><language>en-us</language><lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/openclaw/index.xml" rel="self" type="application/rss+xml"/><item><title>[도구] openclaw를 써보자 🦀 🖋️</title><link>http://yeniful.github.io/posts/2026/tools-openclaw/</link><pubDate>Sun, 01 Feb 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/tools-openclaw/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;2020년에 샀던 마지막 인텔 맥. 터치바가 좋아서 큰 마음 먹고 16인치를 샀는데… M1 맥북이 생기자마자 바로 애물단지가 되어버렸다. “콘텐츠 감상용으로 쓸까? 아님 서버처럼 쓸까?” 고민하던 중, 요즘 유행하는 개인화 Agent 도구인 &lt;strong&gt;openclaw&lt;/strong&gt;를 세팅하면 좋겠다는 생각이 들었다. 메인으로 쓰고있는 맥북은 보안/권한 이슈가 생길 수 있으니 딱이였다.&lt;/p&gt;
+&lt;h2 id="openclaw란"&gt;Openclaw란?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;개인 비서형 Agent 도구 🦀&lt;/li&gt;
+&lt;li&gt;로컬/앱 접근 권한을 열어두면, 내가 구독 중인 모델 provider와 연결해서 비서처럼 쓸 수 있다.&lt;/li&gt;
+&lt;li&gt;이름을 벌써 세 번째 바꾼 도구… (찾을 땐 &lt;strong&gt;ClawdBot / MoltBot / Openclaw&lt;/strong&gt; 키워드로 검색 중)&lt;/li&gt;
+&lt;li&gt;“맥미니 품절 대란”의 원인(?)으로도 종종 언급된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="telegram-"&gt;Telegram ✈️&lt;/h2&gt;
+&lt;p&gt;WhatsApp, Telegram, Slack, Discord 등 다양한 메신저/커뮤니티 도구와 함께 쓸 수 있는데, 나는 개인용이라 &lt;strong&gt;Telegram&lt;/strong&gt;으로 세팅했다. @BotFather에게 메시지를 보낸 후 /start 명령어를 입력하면 내 봇 계정을 만들어주고 토큰을 만들어준다. 만들어준 토큰을 openclaw에 연동해서 사용하면 된다.&lt;/p&gt;</description></item></channel></rss>
