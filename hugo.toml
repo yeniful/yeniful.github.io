@@ -2,6 +2,7 @@ baseURL = "http://yeniful.github.io/"
 languageCode = "en-us"
 title = "@yeniful blog"
 theme = "PaperMod"
+pagination.paperSize = 9999  # 페이지네이션 없이 전체 표시
 
 # params: 기능 추가를 위한 config 
 # 주의: 문서의 yaml을 toml로 바꿔서 추가해야 함 (https://transform.tools/yaml-to-toml)
@@ -50,13 +51,14 @@ theme = "PaperMod"
     url = "/tags/"
     weight = 2
 [[menu.main]]
-   name = "Notice"
-   url = "/notice/"
+   name = "Info"
+   url = "/info/"
    weight = 3
-[[menu.main]]
-    name = "Search"
-    url = "/search/"
-    weight = 4        
+# 검색 비활성화
+#[[menu.main]]
+#    name = "Search"
+#    url = "/search/"
+#    weight = 4        
 
 
 # 검색 기능
