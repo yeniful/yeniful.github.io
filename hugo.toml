@@ -6,6 +6,8 @@ theme = "PaperMod"
 # params: 기능 추가를 위한 config 
 # 주의: 문서의 yaml을 toml로 바꿔서 추가해야 함 (https://transform.tools/yaml-to-toml)
 [params]
+    # Simple Mode
+    simpleMode = true
     # 댓글 기능
     comments = true
     # 공유 기능
@@ -44,8 +46,8 @@ theme = "PaperMod"
     url = "/posts/"
     weight = 2
 [[menu.main]]
-    name = "Category"
-    url = "/category/"
+    name = "Tags"
+    url = "/tags/"
     weight = 2
 [[menu.main]]
    name = "Notice"
