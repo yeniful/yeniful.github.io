@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>CS on @yeniful blog</title><link>http://yeniful.github.io/tags/cs/</link><description>Recent content in CS on @yeniful blog</description><generator>Hugo -- 0.155.2</generator><language>en-us</language><lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/cs/index.xml" rel="self" type="application/rss+xml"/><item><title>[Apple Platforms] SoC (System on a Chip)와 AP (Application Processor)</title><link>http://yeniful.github.io/posts/2026/apple-soc/</link><pubDate>Tue, 03 Feb 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple-soc/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;컴퓨터 구조를 공부하면서 스마트폰의 AP, SoC가 어떤 것에 대응되는지 궁금.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;컴퓨터의 CPU와 대응되는 것이 스마트폰의 AP, SoC ?
+&lt;ul&gt;
+&lt;li&gt;하지만 컴퓨터 구조와 스마트폰에서의 컴퓨터 구조는 약간 다름&lt;/li&gt;
+&lt;li&gt;Apple Silicon이 SoC에 해당&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;목차
+&lt;ul&gt;
+&lt;li&gt;컴퓨터 시스템 구조&lt;/li&gt;
+&lt;li&gt;SoC와 AP의 관계&lt;/li&gt;
+&lt;li&gt;Apple Silicon (Apple SoC)&lt;/li&gt;
+&lt;li&gt;iPhone 구조와 PC 구조의 대략적인 비교&lt;/li&gt;
+&lt;li&gt;Apple Silicon 구조&lt;/li&gt;
+&lt;li&gt;정리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="컴퓨터-시스템-구조"&gt;컴퓨터 시스템 구조&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;flowchart LR
+subgraph COMPUTER[&amp;#34;Computer&amp;#34;]
+CPU[&amp;#34;CPU&amp;#34;]
+MODE[&amp;#34;Mode&amp;lt;br/&amp;gt;Bit&amp;#34;]
+DMA[&amp;#34;DMA&amp;lt;br/&amp;gt;Controller&amp;#34;]
+TIMER[&amp;#34;Timer&amp;#34;]
+MEM_CTRL[&amp;#34;Memory&amp;lt;br/&amp;gt;Controller&amp;#34;]
+subgraph MEMORY[&amp;#34;Memory&amp;#34;]
+PROG1[&amp;#34;Program&amp;#34;]
+PROG2[&amp;#34;Program&amp;#34;]
+OS[&amp;#34;O/S&amp;#34;]
+end
+CPU --- MODE
+MODE --- DMA
+DMA --- TIMER
+MODE --- MEM_CTRL
+MEM_CTRL --- MEMORY
+end
+subgraph IO[&amp;#34;I/O Device&amp;#34;]
+subgraph HD[&amp;#34;Hard Disk&amp;#34;]
+DC1[&amp;#34;Device&amp;lt;br/&amp;gt;Controller&amp;#34;] --- BUF1[&amp;#34;Buffer&amp;#34;]
+end
+subgraph KB[&amp;#34;Keyboard&amp;#34;]
+DC2[&amp;#34;Device&amp;lt;br/&amp;gt;Controller&amp;#34;] --- BUF2[&amp;#34;Buffer&amp;#34;]
+end
+subgraph PR[&amp;#34;Print&amp;#34;]
+DC3[&amp;#34;Device&amp;lt;br/&amp;gt;Controller&amp;#34;] --- BUF3[&amp;#34;Buffer&amp;#34;]
+end
+subgraph MO[&amp;#34;Monitor&amp;#34;]
+DC4[&amp;#34;Device&amp;lt;br/&amp;gt;Controller&amp;#34;] --- BUF4[&amp;#34;Buffer&amp;#34;]
+end
+end
+TIMER --- DC1
+TIMER --- DC2
+TIMER --- DC3
+TIMER --- DC4
+style COMPUTER fill:#fff,stroke:#1976d2,stroke-width:2px
+style IO fill:#fff,stroke:#1976d2,stroke-width:2px
+style CPU fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+style MEMORY fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+style HD fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+style MODE fill:#fff,stroke:#333
+style DMA fill:#fff,stroke:#333
+style TIMER fill:#fff,stroke:#333
+style MEM_CTRL fill:#fff,stroke:#333
+style KB fill:#e8f5e9,stroke:#388e3c
+style PR fill:#e8f5e9,stroke:#388e3c
+style MO fill:#e8f5e9,stroke:#388e3c
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;컴퓨터 시스템 구조:
+&lt;ul&gt;
+&lt;li&gt;컴퓨터&lt;/li&gt;
+&lt;li&gt;I/O 디바이스&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;우리가 흔히 말하는 &lt;a href="https://wikidocs.net/111325"&gt;컴퓨터 구조&lt;/a&gt; 핵심 요소:
+&lt;ul&gt;
+&lt;li&gt;CPU (중앙처리장치)&lt;/li&gt;
+&lt;li&gt;메모리 (주기억장치)&lt;/li&gt;
+&lt;li&gt;디스크 (보조기억장치)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="soc와-ap의-관계"&gt;SoC와 AP의 관계&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SoC (System on Chip)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;시스템을 한 칩에 통합&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;CPU/GPU/NPU(신경망)/ISP(카메라)/DSP/메모리 컨트롤러/보안 영역 같은 것들이 들어있는 &lt;strong&gt;통합 칩 전체&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AP (Application Processor)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;앱을 돌리는 메인 프로세서(연산 중심)&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;모바일 업계에서 보통 메인 칩(=사실상 SoC)을 AP라고 부르는 관행이 생김.&lt;/li&gt;
+&lt;li&gt;특히 한국/스마트폰 맥락에서 “AP 뭐야?” 하면 대개 &lt;strong&gt;그 폰의 메인 SoC&lt;/strong&gt;를 뜻함.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;퀄컴 Snapdragon, 삼성 Axynos를 보통 “AP”라고도 부르지만, 기술적으로는 전형적인 SoC&lt;/li&gt;
+&lt;li&gt;Apple은 문서/기술 설명에서 SoC라는 표현을 많이 사용하며, 공식 용어집에서 SoC를 “여러 구성요소를 단일 칩으로 통합한 IC”로 정의 &lt;a href="https://support.apple.com/ko-kr/guide/security/sec93292bfa6/1/web/1"&gt;Apple 용어집 참고&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="apple-silicon-apple-soc"&gt;Apple Silicon (Apple SoC)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Apple의 SoC
+&lt;ul&gt;
+&lt;li&gt;A-시리즈(iPhone)&lt;/li&gt;
+&lt;li&gt;M-시리즈(Mac)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Application Processor, Secure Enclave 등 구성 요소를 SoC 일부로 설명&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="iphone-구조와-pc-구조의-대략적인-비교"&gt;iPhone 구조와 PC 구조의 대략적인 비교&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;flowchart TB
+subgraph PC[&amp;#34;🖥️ PC&amp;#34;]
+PC_CPU[&amp;#34;CPU&amp;#34;]
+PC_GPU[&amp;#34;GPU (별도)&amp;#34;]
+PC_RAM[&amp;#34;RAM&amp;#34;]
+PC_SSD[&amp;#34;SSD&amp;#34;]
+end
+subgraph iPhone[&amp;#34;📱 iPhone&amp;#34;]
+subgraph AP[&amp;#34;SoC ( ⊃ AP)&amp;#34;]
+IP_CPU[&amp;#34;CPU&amp;#34;]
+IP_GPU[&amp;#34;GPU&amp;#34;]
+IP_NPU[&amp;#34;NPU&amp;#34;]
+end
+IP_RAM[&amp;#34;RAM&amp;#34;]
+IP_FLASH[&amp;#34;Flash Storage&amp;#34;]
+end
+style PC fill:#e3f2fd
+style iPhone fill:#fff8e1
+style AP fill:#fce4ec
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="apple-silicon-구조"&gt;Apple Silicon 구조&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;graph TD
+subgraph SoC[&amp;#34;SoC (System on Chip)&amp;#34;]
+AP[&amp;#34;AP&amp;lt;br/&amp;gt;(CPU:&amp;lt;br/&amp;gt;P-core + E-core)&amp;#34;]:::cpu
+GPU[&amp;#34;GPU&amp;#34;]:::gpu
+NPU[&amp;#34;Neural Engine&amp;lt;br/&amp;gt;(NPU)&amp;#34;]:::npu
+ISP[&amp;#34;ISP&amp;lt;br/&amp;gt;(Image Signal Processor)&amp;#34;]:::isp
+MEM[&amp;#34;Memory Controller&amp;lt;br/&amp;gt;(UMA: LPDDR5X)&amp;#34;]:::mem
+SEC[&amp;#34;Secure Enclave&amp;#34;]:::sec
+MOD[&amp;#34;Modem&amp;lt;br/&amp;gt;(5G Baseband 등)&amp;#34;]:::mod
+end
+classDef cpu fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+classDef gpu fill:#f3e5f5,stroke:#7b1fa2
+classDef npu fill:#e8f5e9,stroke:#388e3c
+classDef isp fill:#fff3e0,stroke:#f57c00
+classDef mem fill:#e0f2f1,stroke:#00695c
+classDef sec fill:#fce4ec,stroke:#c2185b
+classDef mod fill:#f5f5f5,stroke:#424242
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="정리"&gt;정리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;제품 스펙에서 &lt;strong&gt;AP ≈ SoC&lt;/strong&gt; 로 흔하게 인식되지만&lt;/li&gt;
+&lt;li&gt;엄밀하게 구분하면 &lt;strong&gt;AP는 SoC 중 앱/연산을 담당하는 중심 칩&lt;/strong&gt; (&lt;strong&gt;SoC ⊃ AP&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Apple 플랫폼에서는 SoC 표현을 더 많이 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="references-"&gt;References 👀&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://support.apple.com/ko-kr/guide/security/sec87716a080/web"&gt;Apple SoC 보안&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://support.apple.com/ko-kr/guide/security/sec93292bfa6/1/web/1"&gt;용어집&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
