@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>IOS on @yeniful blog</title><link>http://yeniful.github.io/tags/ios/</link><description>Recent content in IOS on @yeniful blog</description><generator>Hugo -- 0.155.2</generator><language>en-us</language><lastBuildDate>Fri, 23 Jan 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml"/><item><title>[Apple Platforms] Testing 🖋️</title><link>http://yeniful.github.io/posts/2026/apple-testing/</link><pubDate>Fri, 23 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple-testing/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>IOS on @yeniful blog</title><link>http://yeniful.github.io/tags/ios/</link><description>Recent content in IOS on @yeniful blog</description><generator>Hugo -- 0.155.2</generator><language>en-us</language><lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml"/><item><title>[Apple Platforms] scenePhase</title><link>http://yeniful.github.io/posts/2026/apple-scenephase/</link><pubDate>Sun, 08 Feb 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple-scenephase/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;앱 개발 중 네트워크 상태 확인이나 인증 토큰 갱신 같은 로직을 포그라운드 복귀 시점에 실행해야하는 경우
+&lt;ul&gt;
+&lt;li&gt;UIKit에서는 &lt;code&gt;SceneDelegate&lt;/code&gt;의 &lt;code&gt;sceneWillEnterForeground&lt;/code&gt;, &lt;code&gt;sceneDidBecomeActive&lt;/code&gt;, &lt;code&gt;sceneDidEnterBackground&lt;/code&gt; 등 구현 필요&lt;/li&gt;
+&lt;li&gt;SwiftUI에서는 &lt;code&gt;\.scenePhase&lt;/code&gt;라는 Environment 값으로 간단하게 처리할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;h2 id="scenephase란"&gt;scenePhase란?&lt;/h2&gt;
+&lt;p&gt;SwiftUI가 제공하는 &lt;code&gt;Environment&lt;/code&gt; 값으로, 현재 Scene의 상태를 나타낸다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.active&lt;/code&gt; 앱이 포그라운드에 있고 사용자와 상호작용 가능&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.inactive&lt;/code&gt; 앱이 포그라운드에 있지만 상호작용 불가 (예: 멀티태스킹 전환 중)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.background&lt;/code&gt; 앱이 백그라운드로 이동한 상태&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="사용"&gt;사용&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-swift" data-lang="swift"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@Environment(&lt;span style="color:#960050;background-color:#1e0010"&gt;\&lt;/span&gt;.scenePhase) &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; scenePhase
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; body: some View {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ContentView()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .onChange(of: scenePhase) { oldPhase, newPhase &lt;span style="color:#66d9ef"&gt;in&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;switch&lt;/span&gt; newPhase {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; .active:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;앱 활성화&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; .inactive:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;앱 비활성화&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; .background:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;백그라운드로 이동&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; @unknown &lt;span style="color:#66d9ef"&gt;default&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;참고
+&lt;code&gt;onChange(of:)&lt;/code&gt; 클로저에서 &lt;code&gt;oldPhase&lt;/code&gt;, &lt;code&gt;newPhase&lt;/code&gt; 두 파라미터를 받는 형태는 &lt;strong&gt;iOS 17+&lt;/strong&gt; 문법이다. iOS 16 이하를 지원해야 한다면 단일 파라미터 형태(&lt;code&gt;{ phase in ... }&lt;/code&gt;)를 사용해야 한다.&lt;/p&gt;</description></item><item><title>[Apple Platforms] Testing 🖋️</title><link>http://yeniful.github.io/posts/2026/apple-testing/</link><pubDate>Fri, 23 Jan 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple-testing/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;h3 id="기능을-완전하게-구현하려면"&gt;기능을 완전하게 구현하려면?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;최근 과제 전형을 마치고 제출했던 코드를 다시 살펴보았다.&lt;/li&gt;

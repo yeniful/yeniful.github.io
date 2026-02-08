@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on @yeniful blog</title><link>http://yeniful.github.io/posts/</link><description>Recent content in Posts on @yeniful blog</description><generator>Hugo -- 0.155.2</generator><language>en-us</language><lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>2026년 1월 회고</title><link>http://yeniful.github.io/posts/2026/reflection-2026-01/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/reflection-2026-01/</guid><description>&lt;h2 id="돌아보기"&gt;돌아보기&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on @yeniful blog</title><link>http://yeniful.github.io/posts/</link><description>Recent content in Posts on @yeniful blog</description><generator>Hugo -- 0.155.2</generator><language>en-us</language><lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0900</lastBuildDate><atom:link href="http://yeniful.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>[Apple Platforms] scenePhase</title><link>http://yeniful.github.io/posts/2026/apple-scenephase/</link><pubDate>Sun, 08 Feb 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple-scenephase/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;앱 개발 중 네트워크 상태 확인이나 인증 토큰 갱신 같은 로직을 포그라운드 복귀 시점에 실행해야하는 경우
+&lt;ul&gt;
+&lt;li&gt;UIKit에서는 &lt;code&gt;SceneDelegate&lt;/code&gt;의 &lt;code&gt;sceneWillEnterForeground&lt;/code&gt;, &lt;code&gt;sceneDidBecomeActive&lt;/code&gt;, &lt;code&gt;sceneDidEnterBackground&lt;/code&gt; 등 구현 필요&lt;/li&gt;
+&lt;li&gt;SwiftUI에서는 &lt;code&gt;\.scenePhase&lt;/code&gt;라는 Environment 값으로 간단하게 처리할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;h2 id="scenephase란"&gt;scenePhase란?&lt;/h2&gt;
+&lt;p&gt;SwiftUI가 제공하는 &lt;code&gt;Environment&lt;/code&gt; 값으로, 현재 Scene의 상태를 나타낸다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.active&lt;/code&gt; 앱이 포그라운드에 있고 사용자와 상호작용 가능&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.inactive&lt;/code&gt; 앱이 포그라운드에 있지만 상호작용 불가 (예: 멀티태스킹 전환 중)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.background&lt;/code&gt; 앱이 백그라운드로 이동한 상태&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="사용"&gt;사용&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-swift" data-lang="swift"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@Environment(&lt;span style="color:#960050;background-color:#1e0010"&gt;\&lt;/span&gt;.scenePhase) &lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; scenePhase
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;var&lt;/span&gt; body: some View {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ContentView()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .onChange(of: scenePhase) { oldPhase, newPhase &lt;span style="color:#66d9ef"&gt;in&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;switch&lt;/span&gt; newPhase {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; .active:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;앱 활성화&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; .inactive:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;앱 비활성화&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;case&lt;/span&gt; .background:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;백그라운드로 이동&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; @unknown &lt;span style="color:#66d9ef"&gt;default&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;참고
+&lt;code&gt;onChange(of:)&lt;/code&gt; 클로저에서 &lt;code&gt;oldPhase&lt;/code&gt;, &lt;code&gt;newPhase&lt;/code&gt; 두 파라미터를 받는 형태는 &lt;strong&gt;iOS 17+&lt;/strong&gt; 문법이다. iOS 16 이하를 지원해야 한다면 단일 파라미터 형태(&lt;code&gt;{ phase in ... }&lt;/code&gt;)를 사용해야 한다.&lt;/p&gt;</description></item><item><title>2026년 1월 회고</title><link>http://yeniful.github.io/posts/2026/reflection-2026-01/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/reflection-2026-01/</guid><description>&lt;h2 id="돌아보기"&gt;돌아보기&lt;/h2&gt;
 &lt;p&gt;1월이 순식간에 지나가고 벌써 2월이 되었다. 2026년의 키워드를 &lt;strong&gt;Simplify&lt;/strong&gt;와 &lt;strong&gt;Output&lt;/strong&gt;으로 정하고, 이를 기준으로 월간 목표를 세팅했다. 기준과 목표를 정하지 않았을 때보다 밀도 있는 시간을 보냈던 것 같다. &amp;lsquo;지금 무엇을 해야 하지?&amp;lsquo;와 같이 헤매는 시간이 많이 줄었다. 스터디 클럽의 글쓰기 스터디 덕분에 글도 많이 쓸 수 있었다. 2월 초 코딩 테스트와 기술 면접이 있었는데, 스터디 겸 면접 준비 겸 예전에 공부해 둔 자료들을 다시 정리해 보는 계기가 되었다.&lt;/p&gt;
 &lt;p&gt;취준에 집중하기 위해 3달 동안 친구네 집에서 함께 지내기로 했었다. 짐을 싸고 친구와 함께 지내다가, 개인적인 일로 면접을 앞두고 다시 본가로 돌아오게 되었다. 나름대로 환경을 바꾸려고 노력했는데 중요 일정을 앞두고 계획이 틀어져서 스트레스가 컸다.&lt;/p&gt;</description></item><item><title>[Apple Platforms] SoC (System on a Chip)와 AP (Application Processor)</title><link>http://yeniful.github.io/posts/2026/apple-soc/</link><pubDate>Tue, 03 Feb 2026 00:00:00 +0900</pubDate><guid>http://yeniful.github.io/posts/2026/apple-soc/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
 &lt;ul&gt;
