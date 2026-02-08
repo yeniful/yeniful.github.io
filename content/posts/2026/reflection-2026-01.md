@@ -2,7 +2,7 @@
 title = 'reflection: 2026년 1월 회고'
 date = 2026-02-05T00:00:00+09:00
 draft = false
-tags = ["Reflection", "Java"]
+tags = ["Reflection", "Java"]
 categories = ["💭"]
 summary = ""
 +++
